@@ -417,7 +417,7 @@ export default function LongospherePage() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: '100%' }}
                             transition={{ type: "tween", duration: 0.4 }}
-                            className="fixed inset-0 bg-[#F6D4DB] z-[55] flex flex-col items-center justify-center p-8 space-y-6"
+                            className="fixed inset-0 bg-[#F6D4DB] z-[55] flex flex-col items-center justify-center p-8 pt-24 space-y-6 overflow-y-auto min-h-screen"
                         >
                             {navLinks.map((link, index) => (
                                 <motion.div
