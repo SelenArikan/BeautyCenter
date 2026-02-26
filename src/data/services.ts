@@ -24,7 +24,7 @@ export const serviceCategories: ServiceCategory[] = [
         title: "Cilt Bakımı & Medikal",
         slug: "cilt-bakimi-medikal",
         desc: "Profesyonel cilt analizi ve medikal bakım uygulamalarıyla cildinize özen gösterin",
-        image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop",
+        image: "/assets/ciltbakimi/cilt_bakimi.jpg",
         services: [
             {
                 name: "Medikal Cilt Bakımı",
@@ -32,8 +32,8 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Cildinizin ihtiyacına özel hazırlanan profesyonel medikal bakım seansları ile derinlemesine temizlik ve yenileme.",
                 longDetails: "Medikal cilt bakımı, cildinizin ihtiyaçlarına göre özel olarak tasarlanmış profesyonel bir bakım programıdır. Uzman ekibimiz, cilt analizinden sonra size en uygun bakım protokolünü belirler. Hydrafacial, kimyasal peeling ve özel serum uygulamalarını içeren kapsamlı bir bakım deneyimi sunarız. Her seansta, cildinizin doğal parlaklığını ve sağlığını yeniden kazanmasını hedefliyoruz. Dünyaca ünlü medikal ürünler ve minimal invaziv tekniklerle cildiniz yenilenmiş hissedecek.",
                 duration: "60 Dakika",
-                image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop",
-                heroImage: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/ciltbakimi/cilt_bakimi.jpg",
+                heroImage: "/assets/ciltbakimi/DSC03380.jpg",
                 features: ["Cilt Analizi", "Hydrafacial", "Kimyasal Peeling", "Özel Serumlar", "Anti-Aging"]
             },
             {
@@ -42,8 +42,8 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Derinlemesine temizlik, eksfoliasyon ve nemlendirme ile cildinize anında parlaklık kazandırın.",
                 longDetails: "Hydrafacial, patentli teknolojisiyle cildinizi derinlemesine temizleyen, eksfoliye eden, arındıran ve nemlendiren devrim niteliğinde bir cilt bakım uygulamasıdır. Ağrısız ve kızarıklık bırakmayan bu işlem, tüm cilt tiplerine uygundur. Seans sonrasında cildiniz anında daha parlak, pürüzsüz ve nemli görünür. Gözenekler sıkılaşır, ince çizgiler azalır ve cilt tonu eşitlenir. Her mevsim güvenle yaptırabileceğiniz Hydrafacial ile cildiniz gözle görülür şekilde yenilenir.",
                 duration: "45 Dakika",
-                image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop",
-                heroImage: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/ciltbakimi/DSC03384.jpg",
+                heroImage: "/assets/ciltbakimi/cilt_bakimi.jpg",
                 features: ["Derinlemesine Temizlik", "Eksfoliasyon", "Nemlendirme", "Anında Sonuç"]
             }
         ]
@@ -90,7 +90,7 @@ export const serviceCategories: ServiceCategory[] = [
         title: "Kirpik & Kaş",
         slug: "kirpik-kas",
         desc: "Gözlerinize etkileyici bir çerçeve sunan profesyonel uygulamalar",
-        image: "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
+        image: "/assets/ipekkirpik/DSC07334.jpg",
         services: [
             {
                 name: "İpek Kirpik",
@@ -98,7 +98,7 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Doğal ve dolgun kirpiklere kavuşmanızı sağlayan profesyonel ipek kirpik uygulaması.",
                 longDetails: "İpek kirpik uygulaması, kendi kirpiklerinizin üzerine tek tek veya hacim tekniğiyle uygulanan premium kalite sentetik kirpiklerdir. Doğal görünümlü, hafif ve konforlu olan ipek kirpikler, gözlerinize dramatik bir derinlik kazandırır. Klasik, hacim (volume) ve mega hacim seçenekleriyle istediğiniz yoğunluğu elde edebilirsiniz. Dolgu seanslarıyla kirpikleriniz her zaman bakımlı kalır. Uygulama göz sağlığına zarar vermez.",
                 duration: "90 Dakika",
-                image: "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/ipekkirpik/DSC07334.jpg",
                 heroImage: "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
                 features: ["Klasik Teknik", "Volume Teknik", "Doğal Görünüm", "Hafif & Konforlu"]
             },
@@ -108,8 +108,8 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Kendi doğal kirpiklerinizi kaldırıp kıvırarak etkileyici bir görünüm elde edin.",
                 longDetails: "Kirpik lifting, kendi doğal kirpiklerinizi özel solüsyonlarla kaldırarak kalıcı bir kıvırma işlemidir. Kirpikleriniz daha uzun ve daha kıvrık görünür, gözleriniz daha açık ve canlı bir ifade kazanır. İşlem son derece güvenli ve kısa sürede uygulanır. Kirpik boyama ile birlikte yapıldığında, maskarasız bile muhteşem kirpiklere sahip olursunuz. Sonuç 6-8 hafta kadar devam eder.",
                 duration: "45 Dakika",
-                image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop",
-                heroImage: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/ipekkirpik/DSC07338.jpg",
+                heroImage: "/assets/ipekkirpik/DSC07338.jpg",
                 features: ["Doğal Kıvrım", "Kirpik Boyama", "6-8 Hafta Kalıcı", "Güvenli"]
             }
         ]
@@ -146,7 +146,7 @@ export const serviceCategories: ServiceCategory[] = [
         title: "Vücut Bakımı & Zayıflama",
         slug: "vucut-bakimi-zayiflama",
         desc: "Bölgesel zayıflama ve vücut şekillendirme programları",
-        image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
+        image: "/assets/Masaj/_DSC5325.jpg",
         services: [
             {
                 name: "Bölgesel Zayıflama",
@@ -154,8 +154,8 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Lenfatik drenaj ve özel tekniklerle bölgesel yağ yakımı ve vücut şekillendirme.",
                 longDetails: "Bölgesel zayıflama programımız, lenfatik drenaj masajı, kavitasyon ve radyofrekans gibi ileri teknoloji cihazlarla desteklenen kapsamlı bir vücut şekillendirme programıdır. Karın, basen, bacak ve kol bölgelerindeki inatçı yağ birikintilerini hedef alır. Kombo bölgesel şekillendirme paketlerimizle etkili sonuçlar elde edebilirsiniz. Her seans öncesi vücut analizi yapılır ve kişisel program oluşturulur.",
                 duration: "60 Dakika",
-                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
-                heroImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/zayiflama/_DSC0055.jpg",
+                heroImage: "/assets/zayiflama/DSC0055.jpg",
                 features: ["Lenfatik Drenaj", "Kavitasyon", "Radyofrekans", "Vücut Analizi"]
             },
             {
@@ -164,8 +164,8 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Terapötik masaj teknikleriyle kas ağrılarını giderin ve bedeninizi yenileyin.",
                 longDetails: "Medikal masaj, terapötik amaçlı uygulanan profesyonel masaj tekniklerini içerir. Kas ağrıları, sırt ağrısı, boyun tutulması ve stres kaynaklı gerginliklere karşı etkili bir çözüm sunar. Uzman terapistlerimiz, ihtiyacınıza göre derin doku masajı, İsveç masajı veya lenfatik drenaj masajı uygular. Her seans sonrası kaslarınız gevşer, kan dolaşımınız hızlanır ve kendinizi yenilenmiş hissedersiniz.",
                 duration: "50 Dakika",
-                image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop",
-                heroImage: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/Masaj/_DSC5331.jpg",
+                heroImage: "/assets/Masaj/_DSC5331.jpg",
                 features: ["Derin Doku", "Lenfatik Drenaj", "Stres Giderme", "Kan Dolaşımı"]
             }
         ]
@@ -174,7 +174,7 @@ export const serviceCategories: ServiceCategory[] = [
         title: "Tırnak Bakımı",
         slug: "tirnak-bakimi",
         desc: "Kusursuz tırnak bakımı ve profesyonel protez tırnak uygulamaları",
-        image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2070&auto=format&fit=crop",
+        image: "/assets/Oje/DSC03024.jpg",
         services: [
             {
                 name: "Protez Tırnak",
@@ -192,8 +192,8 @@ export const serviceCategories: ServiceCategory[] = [
                 details: "Ellerinize ve ayaklarınıza profesyonel bakım sunan özel manikür ve pedikür uygulamaları.",
                 longDetails: "Manikür ve pedikür hizmetimizde, ellerinize ve ayaklarınıza kapsamlı bir bakım sunuyoruz. Tırnak şekillendirme, tırnak eti bakımı, el ve ayak masajı, peeling ve oje uygulaması içeren tam bir bakım deneyimi. Klasik, jel ve spa manikür-pedikür seçeneklerimizle elleriniz ve ayaklarınız bakımlı ve sağlıklı görünecek. Kullandığımız premium ürünlerle tırnaklarınız güçlü ve sağlıklı kalır.",
                 duration: "45 Dakika",
-                image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=2070&auto=format&fit=crop",
-                heroImage: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=2070&auto=format&fit=crop",
+                image: "/assets/Oje/DSC03032.jpg",
+                heroImage: "/assets/Oje/DSC03032.jpg",
                 features: ["Tırnak Şekillendirme", "El & Ayak Masajı", "Jel Oje", "Peeling"]
             }
         ]

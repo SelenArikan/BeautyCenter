@@ -217,6 +217,7 @@ export default function LongospherePage() {
     const [activeService, setActiveService] = useState<string | null>(null);
     const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+    const [isShowroomOpen, setIsShowroomOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const { scrollY } = useScroll();
@@ -231,9 +232,9 @@ export default function LongospherePage() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Lock body scroll when mobile menu is open
+    // Lock body scroll when mobile menu or showroom is open
     useEffect(() => {
-        if (isMobileMenuOpen) {
+        if (isMobileMenuOpen || isShowroomOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
@@ -241,7 +242,16 @@ export default function LongospherePage() {
         return () => {
             document.body.style.overflow = '';
         };
-    }, [isMobileMenuOpen]);
+    }, [isMobileMenuOpen, isShowroomOpen]);
+
+    // Check URL params for showroom on mount
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.location.search.includes('showroom=true')) {
+            setIsShowroomOpen(true);
+            // Optional: clean up the URL to just '/' without refreshing
+            window.history.replaceState({}, '', '/');
+        }
+    }, []);
 
     const navLinks = [
         { name: 'Hizmetlerimiz', href: '#services', hasDropdown: true },
@@ -678,6 +688,19 @@ export default function LongospherePage() {
                             );
                         })}
                     </div>
+
+                    {/* View All Services Button */}
+                    <FadeIn delay={0.4}>
+                        <div className="mt-16 text-center text-[#2C3E50]">
+                            <button
+                                onClick={() => setIsShowroomOpen(true)}
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-[#A65E6E] text-[#A65E6E] hover:bg-[#A65E6E] hover:text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-lg"
+                            >
+                                Tüm Hizmetlerimiz
+                                <ArrowRight size={16} />
+                            </button>
+                        </div>
+                    </FadeIn>
                 </Container>
             </Section>
 
@@ -688,7 +711,7 @@ export default function LongospherePage() {
                         <FadeIn direction="right">
                             <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
                                 <img
-                                    src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop"
+                                    src="/assets/Masaj/_DSC5357.jpg"
                                     alt="Beauty Center"
                                     className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
@@ -765,8 +788,8 @@ export default function LongospherePage() {
                             <div className="relative">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4A373] rounded-full opacity-20 blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
                                 <div className="grid grid-cols-2 gap-4">
-                                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop" className="rounded-2xl shadow-2xl mt-12 transform hover:-translate-y-2 transition-transform duration-500" alt="Makeup" />
-                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" className="rounded-2xl shadow-2xl mb-12 transform hover:-translate-y-2 transition-transform duration-500" alt="Spa" />
+                                    <img src="/assets/Mekan/_DSC5227.jpg" className="rounded-2xl shadow-2xl mt-12 transform hover:-translate-y-2 transition-transform duration-500" alt="Makeup" />
+                                    <img src="/assets/Mekan/_DSC5211.jpg" className="rounded-2xl shadow-2xl mb-12 transform hover:-translate-y-2 transition-transform duration-500" alt="Spa" />
                                 </div>
                             </div>
                         </FadeIn>
@@ -964,6 +987,73 @@ export default function LongospherePage() {
                     </div>
                 </Container>
             </footer>
+
+            {/* Showroom Modal */}
+            <AnimatePresence>
+                {isShowroomOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] bg-white overflow-y-auto"
+                    >
+                        {/* Showroom Content */}
+                        <div className="min-h-screen pb-20">
+                            {/* Header */}
+                            <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-gray-100 py-6 px-4 md:px-8 flex justify-between items-center shadow-sm">
+                                <h2 className="text-xl md:text-2xl font-bold tracking-widest uppercase text-[#2C3E50]">Tüm Hizmetlerimiz</h2>
+                                <button
+                                    onClick={() => setIsShowroomOpen(false)}
+                                    className="p-2 text-[#5D6D7E] hover:text-[#A65E6E] transition-colors rounded-full hover:bg-[#F5F5F0]"
+                                >
+                                    <X size={28} />
+                                </button>
+                            </div>
+
+                            {/* Showroom Grid */}
+                            <div className="container mx-auto px-4 md:px-8 mt-12 max-w-7xl">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                                    {serviceCategories.flatMap(cat => cat.services.map((service, index) => (
+                                        <motion.div
+                                            key={service.slug}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: index * 0.05 }}
+                                            className="group cursor-pointer bg-[#F5F5F0] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+                                        >
+                                            <div className="relative h-64 overflow-hidden shrink-0">
+                                                <img
+                                                    src={service.image}
+                                                    alt={service.name}
+                                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                            </div>
+                                            <div className="p-6 flex flex-col flex-grow">
+                                                <span className="text-xs font-bold text-[#A65E6E] uppercase tracking-wider mb-2 block">{cat.title}</span>
+                                                <h3 className="text-xl font-bold text-[#2C3E50] mb-3">{service.name}</h3>
+                                                <p className="text-[#5D6D7E] text-sm font-light line-clamp-3 mb-6 flex-grow">
+                                                    {service.details}
+                                                </p>
+                                                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#2C3E50]/10">
+                                                    <span className="text-xs font-semibold text-[#2C3E50] border border-[#2C3E50]/20 px-3 py-1 rounded-full">{service.duration}</span>
+                                                    <Link
+                                                        href={`/hizmet/${service.slug}`}
+                                                        className="text-[#A65E6E] font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+                                                        onClick={() => setIsShowroomOpen(false)}
+                                                    >
+                                                        Keşfet <ArrowRight size={14} />
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )))}
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

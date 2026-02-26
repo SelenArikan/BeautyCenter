@@ -51,7 +51,7 @@ export default function ServiceDetailPage() {
                             </span>
                         </Link>
                         <Link
-                            href="/#services"
+                            href="/?showroom=true"
                             className="px-6 py-2 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-sm font-semibold uppercase tracking-wide rounded-full transition-all duration-300"
                         >
                             Tüm Hizmetler
@@ -82,7 +82,7 @@ export default function ServiceDetailPage() {
                             </svg>
                         </Link>
                         <ChevronRight size={14} />
-                        <Link href="/#services" className="hover:text-[#A65E6E] transition-colors">{category.title}</Link>
+                        <Link href="/?showroom=true" className="hover:text-[#A65E6E] transition-colors">{category.title}</Link>
                         <ChevronRight size={14} />
                         <span className="text-white">{service.name}</span>
                     </motion.div>
