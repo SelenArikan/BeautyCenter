@@ -239,13 +239,8 @@ export default function BlogDetailPage() {
             {/* Top Navigation */}
             <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#A65E6E]/10">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-[#A65E6E] rounded-full flex items-center justify-center text-white">
-                            <Sparkles size={16} />
-                        </div>
-                        <h1 className="text-xl font-bold tracking-tight uppercase">
-                            Love Yourself <span className="text-[#A65E6E] font-light italic">by Anastasiya</span>
-                        </h1>
+                    <Link href="/" className="flex items-center gap-3 relative z-[60] group">
+                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
                     <nav className="hidden md:flex items-center gap-10">
                         <Link href="/" className="text-sm font-medium hover:text-[#A65E6E] transition-colors">Ana Sayfa</Link>
@@ -477,10 +472,9 @@ export default function BlogDetailPage() {
             {/* Footer */}
             <footer className="bg-white border-t border-[#A65E6E]/10 py-16 mt-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <div className="w-12 h-12 bg-[#A65E6E]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Sparkles size={20} className="text-[#A65E6E]" />
+                    <div className="flex justify-center mb-6">
+                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-16 md:h-20 w-auto transition-transform duration-300 hover:scale-105" />
                     </div>
-                    <h2 className="text-2xl font-bold mb-4 uppercase tracking-tighter">Love Yourself by Anastasiya</h2>
                     <p className="text-[#5D6D7E] max-w-md mx-auto mb-8 text-sm italic">
                         &ldquo;Kendinizi sevmeniz için buradayız. Her gün bir yeni başlangıç, her bakım bir öz sevgi eylemidir.&rdquo;
                     </p>

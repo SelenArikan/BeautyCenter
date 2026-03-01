@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400&amp;family=Great+Vibes&amp;family=Zilla+Slab:wght@400;500&amp;display=swap');
+      
+      .main-text {
+        font-family: 'Zilla Slab', 'Courier Prime', Courier, monospace;
+        font-size: 85px;
+        fill: #e845ae;
+        letter-spacing: 12px;
+      }
+      .sub-text {
+        font-family: 'Great Vibes', cursive;
+        font-size: 55px;
+        fill: #ffffff;
+      }
+      .frame {
+        fill: none;
+        stroke: #e845ae;
+        stroke-width: 8;
+      }
+      .solid-box {
+        fill: #e845ae;
+      }
+    </style>
+  </defs>
+
+  <!-- Frame 
+       Top Left Tick X: 380, Y starts from 25
+       Bottom Left Tick X: 380, Y ends at 275
+       Right X: 775
+  -->
+  <path class="frame" d="M 400,85 L 400,25 L 775,25 L 775,275 L 400,275 L 400,215" />
+
+  <!-- Love Yourself text -->
+  <text x="25" y="135" class="main-text">Love Yourself</text>
+
+  <!-- Solid Pink Box -->
+  <rect x="180" y="160" width="400" height="75" class="solid-box" />
+
+  <!-- By Anastasiya text -->
+  <text x="380" y="215" class="sub-text" text-anchor="middle">By Anastasiya</text>
+</svg>

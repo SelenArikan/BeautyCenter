@@ -42,13 +42,8 @@ export default function ServiceDetailPage() {
                 {/* Top Navigation */}
                 <div className="absolute top-0 left-0 right-0 z-10 p-6 md:p-8">
                     <div className="container mx-auto max-w-7xl flex items-center justify-between">
-                        <Link href="/" className="group text-center">
-                            <span className="block text-xl md:text-2xl font-bold tracking-widest uppercase text-white">
-                                Love Yourself
-                            </span>
-                            <span className="block text-[10px] tracking-[0.3em] font-light text-white/70">
-                                BY ANASTASIYA
-                            </span>
+                        <Link href="/" className="group flex items-center justify-center relative z-[60]">
+                            <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
                         </Link>
                         <Link
                             href="/?showroom=true"

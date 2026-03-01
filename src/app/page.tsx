@@ -321,13 +321,8 @@ export default function LongospherePage() {
                     }`}
             >
                 <Container className="flex items-center justify-between">
-                    <Link href="/longosphere" className="relative z-[60] group text-center">
-                        <span className={`block text-xl md:text-2xl font-bold tracking-widest uppercase transition-colors duration-300 ${isMobileMenuOpen ? 'text-[#2C3E50]' : isScrolled ? 'text-[#2C3E50]' : 'text-[#2C3E50]'}`}>
-                            Love Yourself
-                        </span>
-                        <span className={`block text-[10px] tracking-[0.3em] font-light text-center transition-colors duration-300 ${isScrolled ? 'text-[#2C3E50]/70' : 'text-[#2C3E50]/80'}`}>
-                            BY ANASTASIYA
-                        </span>
+                    <Link href="/" className="relative z-[60] group flex items-center justify-center">
+                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-14 md:h-16 lg:h-20 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
 
                     {/* Desktop Nav */}
@@ -921,9 +916,8 @@ export default function LongospherePage() {
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                         <div className="space-y-6">
-                            <Link href="/longosphere" className="block text-center md:text-left">
-                                <span className="text-2xl font-bold tracking-widest uppercase text-[#2C3E50]">Love Yourself</span>
-                                <span className="block text-[10px] tracking-[0.3em] font-light text-[#2C3E50]/60">BY ANASTASIYA</span>
+                            <Link href="/" className="block text-center md:text-left">
+                                <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-12 w-auto mx-auto md:mx-0 transition-transform duration-300 hover:scale-105" />
                             </Link>
                             <p className="text-[#2C3E50]/70 text-sm font-light leading-relaxed">
                                 Şehrin kalbinde, stresten uzak, kendinizle baş başa kalacağınız özel bir kaçış noktası.
