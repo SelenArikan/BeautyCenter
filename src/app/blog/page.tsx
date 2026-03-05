@@ -181,7 +181,7 @@ export default function BlogPage() {
             <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#A65E6E]/10">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3 relative z-[60] group">
-                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
+                        <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
                     <nav className="hidden md:flex items-center gap-10">
                         <Link href="/" className="text-sm font-semibold hover:text-[#A65E6E] transition-colors uppercase tracking-wider">
@@ -374,7 +374,7 @@ export default function BlogPage() {
             <footer className="bg-white border-t border-[#A65E6E]/10 py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
                     <Link href="/" className="flex items-center gap-3">
-                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-8 md:h-10 w-auto transition-transform duration-300 hover:scale-105" />
+                        <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-8 md:h-10 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
                     <div className="flex gap-4">
                         <a href="https://www.instagram.com/loveyourselfbyanastasiya/" target="_blank" rel="noopener noreferrer" className="text-[#5D6D7E]/40 hover:text-[#A65E6E] transition-colors">

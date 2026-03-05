@@ -240,7 +240,7 @@ export default function BlogDetailPage() {
             <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#A65E6E]/10">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3 relative z-[60] group">
-                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
+                        <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
                     <nav className="hidden md:flex items-center gap-10">
                         <Link href="/" className="text-sm font-medium hover:text-[#A65E6E] transition-colors">Ana Sayfa</Link>
@@ -473,7 +473,7 @@ export default function BlogDetailPage() {
             <footer className="bg-white border-t border-[#A65E6E]/10 py-16 mt-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="flex justify-center mb-6">
-                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-16 md:h-20 w-auto transition-transform duration-300 hover:scale-105" />
+                        <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-16 md:h-20 w-auto transition-transform duration-300 hover:scale-105" />
                     </div>
                     <p className="text-[#5D6D7E] max-w-md mx-auto mb-8 text-sm italic">
                         &ldquo;Kendinizi sevmeniz için buradayız. Her gün bir yeni başlangıç, her bakım bir öz sevgi eylemidir.&rdquo;

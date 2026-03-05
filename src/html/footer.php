@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div class="space-y-6">
                 <a href="/" class="block text-center md:text-left">
-                    <img src="/public/assets/logo/logo.svg" alt="Love Yourself By Anastasiya"
+                    <img src="/public/assets/logo/logo.png" alt="Love Yourself By Anastasiya"
                         class="h-12 w-auto mx-auto md:mx-0 transition-transform duration-300 hover:scale-105" />
                 </a>
                 <p class="text-[#2C3E50]/70 text-sm font-light leading-relaxed">
@@ -127,7 +127,8 @@
                                         class="text-xs font-semibold text-[#2C3E50] border border-[#2C3E50]/20 px-3 py-1 rounded-full">
                                         <?= htmlspecialchars($service['duration']) ?>
                                     </span>
-                                    <a href="#services" @click="isShowroomOpen = false"
+                                    <a href="hizmet.php?slug=<?= htmlspecialchars($service['slug']) ?>"
+                                        @click="isShowroomOpen = false"
                                         class="text-[#A65E6E] font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                                         Keşfet <i data-lucide="arrow-right" class="w-3 h-3"></i>
                                     </a>

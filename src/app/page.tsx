@@ -311,6 +311,22 @@ export default function LongospherePage() {
                             </svg>
                             <span className="text-[10px] font-semibold tracking-wide">WhatsApp</span>
                         </a>
+                        <a
+                            href="https://www.google.com/maps/search/Love+Yourself+by+Anastasiya+B%C3%BCy%C3%BCk%C3%A7ekmece"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 flex flex-col items-center justify-center gap-1.5 py-3.5 text-white hover:bg-white/10 active:bg-white/20 transition-colors"
+                        >
+                            <MapPin size={22} />
+                            <span className="text-[10px] font-semibold tracking-wide">Konum</span>
+                        </a>
+                        <a
+                            href="tel:+905385296388"
+                            className="flex-1 flex flex-col items-center justify-center gap-1.5 py-3.5 text-white hover:bg-white/10 active:bg-white/20 transition-colors"
+                        >
+                            <Phone size={22} />
+                            <span className="text-[10px] font-semibold tracking-wide">Ara</span>
+                        </a>
                     </div>
                 </div>
             )}
@@ -322,7 +338,7 @@ export default function LongospherePage() {
             >
                 <Container className="flex items-center justify-between">
                     <Link href="/" className="relative z-[60] group flex items-center justify-center">
-                        <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-14 md:h-16 lg:h-20 w-auto transition-transform duration-300 hover:scale-105" />
+                        <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-14 md:h-16 lg:h-20 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
 
                     {/* Desktop Nav */}
@@ -422,7 +438,7 @@ export default function LongospherePage() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: '100%' }}
                             transition={{ type: "tween", duration: 0.4 }}
-                            className="fixed inset-0 bg-[#F6D4DB] z-[55] flex flex-col items-center justify-center p-8 pt-24 space-y-6 overflow-y-auto min-h-screen"
+                            className="fixed inset-0 bg-[#F6D4DB] z-[55] flex flex-col items-center justify-start p-8 pt-28 space-y-6 overflow-y-auto min-h-screen"
                         >
                             {navLinks.map((link, index) => (
                                 <motion.div
@@ -917,7 +933,7 @@ export default function LongospherePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                         <div className="space-y-6">
                             <Link href="/" className="block text-center md:text-left">
-                                <img src="/assets/logo/logo.svg" alt="Love Yourself By Anastasiya" className="h-12 w-auto mx-auto md:mx-0 transition-transform duration-300 hover:scale-105" />
+                                <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-12 w-auto mx-auto md:mx-0 transition-transform duration-300 hover:scale-105" />
                             </Link>
                             <p className="text-[#2C3E50]/70 text-sm font-light leading-relaxed">
                                 Şehrin kalbinde, stresten uzak, kendinizle baş başa kalacağınız özel bir kaçış noktası.

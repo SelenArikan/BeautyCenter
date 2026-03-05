@@ -3,7 +3,7 @@
 <!-- Hero Section -->
 <div class="relative h-screen w-full overflow-hidden bg-[#F6D4DB]">
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="transition: opacity 0.5s;">
-        <video autoPlay loop muted playsInline class="absolute inset-0 w-full h-full object-cover"
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover"
             style="object-position: center center"
             poster="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop">
             <source src="/public/hero-bg.mp4" type="video/mp4" />
@@ -324,17 +324,37 @@
             </div>
             <h2 class="text-4xl md:text-5xl font-bold text-[#2C3E50] mb-6">Misafirlerimiz Ne Diyor?</h2>
             <div class="w-24 h-1 bg-[#A65E6E] mx-auto rounded-full mb-8"></div>
+
+            <!-- Rating Summary -->
+            <div class="flex flex-col items-center gap-3 fade-in-up">
+                <div class="flex items-center gap-4">
+                    <span class="text-5xl font-bold text-[#2C3E50]">5.0</span>
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center gap-0.5">
+                            <?php for ($s = 1; $s <= 5; $s++): ?>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBBC05">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            <?php endfor; ?>
+                        </div>
+                        <span class="text-[#5D6D7E] text-sm font-light mt-1">22 değerlendirme</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Static Reviews -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-up">
             <?php
             $reviews = [
-                ['name' => 'Ayşe Y.', 'rating' => 5, 'text' => 'Çok memnun kaldım, harika bir yer!', 'time' => '1 hafta önce'],
-                ['name' => 'Elif B.', 'rating' => 5, 'text' => 'Personel çok ilgili, işlemler çok başarılı.', 'time' => '1 ay önce'],
-                ['name' => 'Zeynep K.', 'rating' => 5, 'text' => 'Temiz ve profesyonel bir ortam. Kesinlikle tavsiye ederim.', 'time' => '2 ay önce'],
+                ['name' => 'Müşteri', 'rating' => 5, 'text' => 'Temiz bir işletme, ilgili ve güler yüzlü çalışanlar. Gönül rahatlığıyla gidebilirsiniz.', 'time' => '2 hafta önce'],
+                ['name' => 'Müşteri', 'rating' => 5, 'text' => 'Temiz ve güvenilir işletme. Sara\'ya defalarca işleme gittim ve hepsinden ayrı memnunum, teşekkür ederim.', 'time' => '3 hafta önce'],
+                ['name' => 'Müşteri', 'rating' => 5, 'text' => 'Cilt bakımı manikür ve pedikür yaptırdım çok memnun kaldım. Hydro facial ve lazer epilasyon için randevu istiyorum, en yakın zamanda lütfen.', 'time' => 'bir ay önce'],
+                ['name' => 'Müşteri', 'rating' => 5, 'text' => 'Aşırı aşırı güzel çok beğendim. Esra hanıma çok teşekkür ederim hayallerimdeki gibi ♡♡', 'time' => 'bir ay önce'],
+                ['name' => 'Müşteri', 'rating' => 5, 'text' => 'I had a very good manicure and pedicure. All traces of dead skin were carefully removed without any pain. I also had a Hydrafacial.', 'time' => '2 ay önce'],
             ];
-            $colors = ['#A65E6E', '#4285F4', '#34A853'];
+            $colors = ['#A65E6E', '#4285F4', '#34A853', '#EA4335', '#FBBC05'];
             foreach ($reviews as $i => $review):
                 ?>
                 <div class="bg-[#F5F5F0] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
