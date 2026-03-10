@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, Clock, Sparkles } from 'lucide-react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ChevronRight, ChevronLeft, Clock, Sparkles, Camera, X } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { getServiceBySlug, serviceCategories, RANDEVU_URL } from '@/data/services';
@@ -11,6 +11,49 @@ export default function ServiceDetailPage() {
     const params = useParams();
     const slug = params.slug as string;
     const result = getServiceBySlug(slug);
+
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+
+    const openLightbox = useCallback((index: number) => {
+        setLightboxIndex(index);
+        setLightboxOpen(true);
+    }, []);
+
+    const closeLightbox = useCallback(() => {
+        setLightboxOpen(false);
+    }, []);
+
+    const goNext = useCallback(() => {
+        if (!result) return;
+        setLightboxIndex((prev) => (prev + 1) % result.service.gallery.length);
+    }, [result]);
+
+    const goPrev = useCallback(() => {
+        if (!result) return;
+        setLightboxIndex((prev) => (prev - 1 + result.service.gallery.length) % result.service.gallery.length);
+    }, [result]);
+
+    useEffect(() => {
+        if (!lightboxOpen) return;
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') goNext();
+            if (e.key === 'ArrowLeft') goPrev();
+        };
+        window.addEventListener('keydown', handleKey);
+        return () => window.removeEventListener('keydown', handleKey);
+    }, [lightboxOpen, closeLightbox, goNext, goPrev]);
+
+    // Prevent body scroll when lightbox is open
+    useEffect(() => {
+        if (lightboxOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [lightboxOpen]);
 
     if (!result) {
         return (
@@ -29,6 +72,64 @@ export default function ServiceDetailPage() {
 
     return (
         <div className="min-h-screen bg-[#F5F5F0] text-[#2C3E50] font-sans selection:bg-[#F6D4DB] selection:text-[#2C3E50]">
+
+            {/* Lightbox Modal */}
+            <AnimatePresence>
+                {lightboxOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center"
+                        onClick={closeLightbox}
+                    >
+                        {/* Close Button */}
+                        <button
+                            onClick={closeLightbox}
+                            className="absolute top-6 right-6 z-[110] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group"
+                        >
+                            <X size={24} className="text-white group-hover:rotate-90 transition-transform duration-300" />
+                        </button>
+
+                        {/* Previous Button */}
+                        <button
+                            onClick={(e) => { e.stopPropagation(); goPrev(); }}
+                            className="absolute left-4 md:left-8 z-[110] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group"
+                        >
+                            <ChevronLeft size={28} className="text-white group-hover:-translate-x-0.5 transition-transform" />
+                        </button>
+
+                        {/* Next Button */}
+                        <button
+                            onClick={(e) => { e.stopPropagation(); goNext(); }}
+                            className="absolute right-4 md:right-8 z-[110] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group"
+                        >
+                            <ChevronRight size={28} className="text-white group-hover:translate-x-0.5 transition-transform" />
+                        </button>
+
+                        {/* Image */}
+                        <motion.img
+                            key={lightboxIndex}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.3 }}
+                            src={service.gallery[lightboxIndex]}
+                            alt={`${service.name} - ${lightboxIndex + 1}`}
+                            className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+
+                        {/* Counter */}
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+                            <span className="text-white/80 text-sm font-medium">
+                                {lightboxIndex + 1} / {service.gallery.length}
+                            </span>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Hero Banner */}
             <div className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
@@ -113,7 +214,7 @@ export default function ServiceDetailPage() {
                             </p>
 
                             {/* Features Grid */}
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
                                 {service.features.map((feature, i) => (
                                     <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
                                         <div className="w-8 h-8 bg-[#A65E6E]/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -123,6 +224,64 @@ export default function ServiceDetailPage() {
                                     </div>
                                 ))}
                             </div>
+
+                            {/* Gallery Section */}
+                            {service.gallery && service.gallery.length > 0 && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.5 }}
+                                    className="mb-10"
+                                >
+                                    {/* Gallery Header */}
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-10 h-10 bg-gradient-to-br from-[#A65E6E] to-[#D4A0A8] rounded-full flex items-center justify-center shadow-md">
+                                            <Camera size={18} className="text-white" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-2xl md:text-3xl font-bold text-[#2C3E50]">Galeri</h3>
+                                            <p className="text-sm text-[#5D6D7E] font-light">Uygulama görsellerimiz</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Gallery Grid */}
+                                    <div className="grid grid-cols-2 gap-3 md:gap-4">
+                                        {service.gallery.map((img, i) => (
+                                            <motion.div
+                                                key={i}
+                                                initial={{ opacity: 0, scale: 0.95 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                transition={{ duration: 0.4, delay: 0.6 + i * 0.1 }}
+                                                className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg ${i === 0 ? 'row-span-2 h-[300px] md:h-[420px]' : 'h-[145px] md:h-[200px]'
+                                                    }`}
+                                                onClick={() => openLightbox(i)}
+                                            >
+                                                <img
+                                                    src={img}
+                                                    alt={`${service.name} - Görsel ${i + 1}`}
+                                                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                                />
+                                                {/* Hover Overlay */}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                                    <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                            <circle cx="11" cy="11" r="8" />
+                                                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                                            <line x1="11" y1="8" x2="11" y2="14" />
+                                                            <line x1="8" y1="11" x2="14" y2="11" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                {/* Image Number Badge */}
+                                                <div className="absolute bottom-3 right-3 px-2.5 py-1 bg-black/40 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                    <span className="text-white text-xs font-medium">{i + 1}/{service.gallery.length}</span>
+                                                </div>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
                         </motion.div>
                     </div>
 

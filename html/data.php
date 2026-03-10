@@ -17,7 +17,8 @@ $serviceCategories = [
                 "duration" => "60 Dakika",
                 "image" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
                 "heroImage" => "/public/assets/ciltbakimi/DSC03380.jpg",
-                "features" => ["Cilt Analizi", "Hydrafacial", "Kimyasal Peeling", "Özel Serumlar", "Anti-Aging"]
+                "features" => ["Cilt Analizi", "Hydrafacial", "Kimyasal Peeling", "Özel Serumlar", "Anti-Aging"],
+                "gallery" => ["/public/assets/ciltbakimi/cilt_bakimi.jpg", "/public/assets/ciltbakimi/DSC03380.jpg", "/public/assets/ciltbakimi/DSC03384.jpg", "/public/assets/ciltbakimi/_DSC7859.jpg", "/public/assets/ciltbakimi/_DSC7872.jpg", "/public/assets/ciltbakimi/DSC07649.jpg"]
             ],
             [
                 "name" => "Hydrafacial",
@@ -27,7 +28,8 @@ $serviceCategories = [
                 "duration" => "45 Dakika",
                 "image" => "/public/assets/ciltbakimi/DSC03384.jpg",
                 "heroImage" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
-                "features" => ["Derinlemesine Temizlik", "Eksfoliasyon", "Nemlendirme", "Anında Sonuç"]
+                "features" => ["Derinlemesine Temizlik", "Eksfoliasyon", "Nemlendirme", "Anında Sonuç"],
+                "gallery" => ["/public/assets/ciltbakimi/cilt_bakimi.jpg", "/public/assets/ciltbakimi/DSC03380.jpg", "/public/assets/ciltbakimi/DSC03384.jpg", "/public/assets/ciltbakimi/_DSC7859.jpg", "/public/assets/ciltbakimi/_DSC7872.jpg", "/public/assets/ciltbakimi/DSC07649.jpg"]
             ]
         ]
     ],
@@ -45,7 +47,8 @@ $serviceCategories = [
                 "duration" => "90 Dakika",
                 "image" => "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
                 "heroImage" => "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
-                "features" => ["Doğal Görünüm", "Kişiye Özel Renk", "Uzun Ömürlü", "Ağrısız"]
+                "features" => ["Doğal Görünüm", "Kişiye Özel Renk", "Uzun Ömürlü", "Ağrısız"],
+                "gallery" => ["/public/assets/Mekan/DSC02978.jpg", "/public/assets/Mekan/DSC02996.jpg", "/public/assets/Mekan/DSC03012.jpg", "/public/assets/Mekan/DSC03013.jpg"]
             ],
             [
                 "name" => "Kalıcı Kaş",
@@ -55,7 +58,8 @@ $serviceCategories = [
                 "duration" => "120 Dakika",
                 "image" => "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop",
                 "heroImage" => "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop",
-                "features" => ["Microblading", "Ombre Tekniği", "Doğal Kıl Kıl", "Yüz Analizi"]
+                "features" => ["Microblading", "Ombre Tekniği", "Doğal Kıl Kıl", "Yüz Analizi"],
+                "gallery" => ["/public/assets/Mekan/_DSC5208.jpg", "/public/assets/Mekan/_DSC5211.jpg", "/public/assets/Mekan/_DSC5218.jpg", "/public/assets/Mekan/_DSC5227.jpg"]
             ],
             [
                 "name" => "Kalıcı Eyeliner",
@@ -65,7 +69,8 @@ $serviceCategories = [
                 "duration" => "60 Dakika",
                 "image" => "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
                 "heroImage" => "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
-                "features" => ["İnce Çizgi", "Kirpik Dolgusu", "Doğal Görünüm", "Steril Ortam"]
+                "features" => ["İnce Çizgi", "Kirpik Dolgusu", "Doğal Görünüm", "Steril Ortam"],
+                "gallery" => ["/public/assets/Mekan/DSC02978.jpg", "/public/assets/Mekan/DSC03012.jpg", "/public/assets/Mekan/_DSC5208.jpg", "/public/assets/Mekan/_DSC5218.jpg"]
             ]
         ]
     ],
@@ -83,7 +88,8 @@ $serviceCategories = [
                 "duration" => "90 Dakika",
                 "image" => "/public/assets/ipekkirpik/DSC07334.jpg",
                 "heroImage" => "/public/assets/ipekkirpik/DSC07334.jpg",
-                "features" => ["Klasik Teknik", "Volume Teknik", "Doğal Görünüm", "Hafif & Konforlu"]
+                "features" => ["Klasik Teknik", "Volume Teknik", "Doğal Görünüm", "Hafif & Konforlu"],
+                "gallery" => ["/public/assets/ipekkirpik/DSC07334.jpg", "/public/assets/ipekkirpik/DSC07330.jpg", "/public/assets/ipekkirpik/DSC07335.jpg", "/public/assets/ipekkirpik/DSC07338.jpg"]
             ],
             [
                 "name" => "Kirpik Lifting",
@@ -93,7 +99,8 @@ $serviceCategories = [
                 "duration" => "45 Dakika",
                 "image" => "/public/assets/ipekkirpik/DSC07338.jpg",
                 "heroImage" => "/public/assets/ipekkirpik/DSC07338.jpg",
-                "features" => ["Doğal Kıvrım", "Kirpik Boyama", "6-8 Hafta Kalıcı", "Güvenli"]
+                "features" => ["Doğal Kıvrım", "Kirpik Boyama", "6-8 Hafta Kalıcı", "Güvenli"],
+                "gallery" => ["/public/assets/ipekkirpik/DSC07338.jpg", "/public/assets/ipekkirpik/DSC07330.jpg", "/public/assets/ipekkirpik/DSC07334.jpg", "/public/assets/ipekkirpik/DSC07335.jpg"]
             ]
         ]
     ],
@@ -101,7 +108,7 @@ $serviceCategories = [
         "title" => "Epilasyon",
         "slug" => "epilasyon",
         "desc" => "En son teknoloji ile kalıcı ve ağrısız tüy azaltma çözümleri",
-        "image" => "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070&auto=format&fit=crop",
+        "image" => "/public/assets/epilasyon/DSC07515.jpg",
         "services" => [
             [
                 "name" => "Lazer Epilasyon",
@@ -109,9 +116,10 @@ $serviceCategories = [
                 "details" => "Son teknoloji lazer cihazlarıyla kalıcı ve ağrısız tüy azaltma uygulaması.",
                 "longDetails" => "Lazer epilasyon, yüksek teknolojili lazer cihazlarımızla istenmeyen tüylerden kalıcı olarak kurtulmanızı sağlar.",
                 "duration" => "30-60 Dakika",
-                "image" => "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070&auto=format&fit=crop",
-                "heroImage" => "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070&auto=format&fit=crop",
-                "features" => ["Son Teknoloji", "Tüm Cilt Tipleri", "Soğutma Sistemi", "Kalıcı Sonuç"]
+                "image" => "/public/assets/epilasyon/DSC07517.jpg",
+                "heroImage" => "/public/assets/epilasyon/DSC07548.jpg",
+                "features" => ["Son Teknoloji", "Tüm Cilt Tipleri", "Soğutma Sistemi", "Kalıcı Sonuç"],
+                "gallery" => ["/public/assets/epilasyon/DSC07517.jpg", "/public/assets/epilasyon/DSC07548.jpg", "/public/assets/epilasyon/DSC07515.jpg"]
             ],
             [
                 "name" => "İğneli Epilasyon",
@@ -119,9 +127,10 @@ $serviceCategories = [
                 "details" => "Kalıcı tüy yok etme garantisi sunan iğneli epilasyon uygulaması.",
                 "longDetails" => "İğneli epilasyon, tüy kökünü tamamen yok eden ve kalıcı sonuç garantisi sunan en etkili epilasyon yöntemidir.",
                 "duration" => "30-60 Dakika",
-                "image" => "https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=2070&auto=format&fit=crop",
-                "heroImage" => "https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=2070&auto=format&fit=crop",
-                "features" => ["%100 Kalıcı", "Tüm Tüy Renkleri", "Tek Kullanımlık İğne", "Uzman Uygulama"]
+                "image" => "/public/assets/epilasyon/DSC07548.jpg",
+                "heroImage" => "/public/assets/epilasyon/DSC07548.jpg",
+                "features" => ["%100 Kalıcı", "Tüm Tüy Renkleri", "Tek Kullanımlık İğne", "Uzman Uygulama"],
+                "gallery" => ["/public/assets/epilasyon/DSC07517.jpg", "/public/assets/epilasyon/DSC07548.jpg", "/public/assets/epilasyon/DSC07515.jpg"]
             ]
         ]
     ],
@@ -138,8 +147,9 @@ $serviceCategories = [
                 "longDetails" => "Bölgesel zayıflama programımız, lenfatik drenaj masajı, kavitasyon ve radyofrekans gibi ileri teknoloji cihazlarla desteklenen kapsamlı bir vücut şekillendirme programıdır.",
                 "duration" => "60 Dakika",
                 "image" => "/public/assets/zayiflama/_DSC0055.jpg",
-                "heroImage" => "/public/assets/zayiflama/DSC0055.jpg",
-                "features" => ["Lenfatik Drenaj", "Kavitasyon", "Radyofrekans", "Vücut Analizi"]
+                "heroImage" => "/public/assets/zayiflama/_DSC0055.jpg",
+                "features" => ["Lenfatik Drenaj", "Kavitasyon", "Radyofrekans", "Vücut Analizi"],
+                "gallery" => ["/public/assets/zayiflama/_DSC0055.jpg", "/public/assets/zayiflama/DSC07494.jpg", "/public/assets/zayiflama/DSC07459.jpg", "/public/assets/zayiflama/_DSC7845.jpg"]
             ],
             [
                 "name" => "Medikal Masaj",
@@ -149,7 +159,8 @@ $serviceCategories = [
                 "duration" => "50 Dakika",
                 "image" => "/public/assets/Masaj/_DSC5331.jpg",
                 "heroImage" => "/public/assets/Masaj/_DSC5331.jpg",
-                "features" => ["Derin Doku", "Lenfatik Drenaj", "Stres Giderme", "Kan Dolaşımı"]
+                "features" => ["Derin Doku", "Lenfatik Drenaj", "Stres Giderme", "Kan Dolaşımı"],
+                "gallery" => ["/public/assets/Masaj/_DSC5331.jpg", "/public/assets/Masaj/_DSC5325.jpg", "/public/assets/Masaj/_DSC5329.jpg", "/public/assets/Masaj/_DSC5357.jpg"]
             ]
         ]
     ],
@@ -165,9 +176,10 @@ $serviceCategories = [
                 "details" => "Doğal görünümlü, uzun ömürlü protez tırnak uygulamaları.",
                 "longDetails" => "Protez tırnak uygulamamız, doğal görünümlü ve uzun ömürlü sonuçlar sunar.",
                 "duration" => "60 Dakika",
-                "image" => "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2070&auto=format&fit=crop",
+                "image" => "/public/assets/Oje/_DSC7899.jpg",
                 "heroImage" => "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2070&auto=format&fit=crop",
-                "features" => ["Akrilik", "Jel", "Doğal Görünüm", "Uzun Ömürlü"]
+                "features" => ["Akrilik", "Jel", "Doğal Görünüm", "Uzun Ömürlü"],
+                "gallery" => ["/public/assets/Oje/DSC03024.jpg", "/public/assets/Oje/DSC03032.jpg", "/public/assets/Oje/DSC03037.jpg", "/public/assets/Oje/DSC03041.jpg"]
             ],
             [
                 "name" => "Manikür & Pedikür",
@@ -177,7 +189,8 @@ $serviceCategories = [
                 "duration" => "45 Dakika",
                 "image" => "/public/assets/Oje/DSC03032.jpg",
                 "heroImage" => "/public/assets/Oje/DSC03032.jpg",
-                "features" => ["Tırnak Şekillendirme", "El & Ayak Masajı", "Jel Oje", "Peeling"]
+                "features" => ["Tırnak Şekillendirme", "El & Ayak Masajı", "Jel Oje", "Peeling"],
+                "gallery" => ["/public/assets/Oje/DSC03032.jpg", "/public/assets/Oje/DSC03024.jpg", "/public/assets/Oje/DSC03037.jpg", "/public/assets/Oje/DSC03052.jpg"]
             ]
         ]
     ]

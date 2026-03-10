@@ -86,7 +86,7 @@ if (!$foundService) {
 
                 <!-- Features Grid -->
                 <?php if (!empty($foundService['features'])): ?>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
                         <?php foreach ($foundService['features'] as $feature): ?>
                             <div class="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
                                 <div
@@ -98,6 +98,94 @@ if (!$foundService) {
                                 </span>
                             </div>
                         <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Gallery Section -->
+                <?php if (!empty($foundService['gallery'])): ?>
+                    <div class="mb-10 fade-in-up" style="transition-delay: 0.5s">
+                        <!-- Gallery Header -->
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center shadow-md"
+                                style="background: linear-gradient(135deg, #A65E6E, #D4A0A8);">
+                                <i data-lucide="camera" class="w-[18px] h-[18px] text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-[#2C3E50]">Galeri</h3>
+                                <p class="text-sm text-[#5D6D7E] font-light">Uygulama görsellerimiz</p>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Grid -->
+                        <div class="grid grid-cols-2 gap-3 md:gap-4">
+                            <?php foreach ($foundService['gallery'] as $i => $img): ?>
+                                <div class="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg <?= $i === 0 ? 'row-span-2' : '' ?>"
+                                    style="height: <?= $i === 0 ? '420px' : '200px' ?>;" onclick="openLightbox(<?= $i ?>)">
+                                    <img src="<?= htmlspecialchars($img) ?>"
+                                        alt="<?= htmlspecialchars($foundService['name']) ?> - Görsel <?= $i + 1 ?>"
+                                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                                    <!-- Hover Overlay -->
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                        <div
+                                            class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <circle cx="11" cy="11" r="8" />
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                                <line x1="11" y1="8" x2="11" y2="14" />
+                                                <line x1="8" y1="11" x2="14" y2="11" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <!-- Image Number Badge -->
+                                    <div
+                                        class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/40 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <span
+                                            class="text-white text-xs font-medium"><?= $i + 1 ?>/<?= count($foundService['gallery']) ?></span>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Lightbox Modal -->
+                <?php if (!empty($foundService['gallery'])): ?>
+                    <div id="lightbox"
+                        class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md items-center justify-center hidden"
+                        style="display: none;">
+                        <!-- Close Button -->
+                        <button onclick="closeLightbox()"
+                            class="absolute top-6 right-6 z-[110] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group">
+                            <i data-lucide="x"
+                                class="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300"></i>
+                        </button>
+                        <!-- Previous Button -->
+                        <button onclick="event.stopPropagation(); lightboxPrev();"
+                            class="absolute left-4 md:left-8 z-[110] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group">
+                            <i data-lucide="chevron-left"
+                                class="w-7 h-7 text-white group-hover:-translate-x-0.5 transition-transform"></i>
+                        </button>
+                        <!-- Next Button -->
+                        <button onclick="event.stopPropagation(); lightboxNext();"
+                            class="absolute right-4 md:right-8 z-[110] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group">
+                            <i data-lucide="chevron-right"
+                                class="w-7 h-7 text-white group-hover:translate-x-0.5 transition-transform"></i>
+                        </button>
+                        <!-- Image -->
+                        <img id="lightbox-img" src="" alt=""
+                            class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl transition-all duration-300"
+                            onclick="event.stopPropagation();" />
+                        <!-- Counter -->
+                        <div
+                            class="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+                            <span id="lightbox-counter" class="text-white/80 text-sm font-medium"></span>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>
@@ -182,6 +270,85 @@ if (!$foundService) {
 </div>
 
 <script>
+    // Gallery data
+    const galleryImages = <?= json_encode($foundService['gallery'] ?? []) ?>;
+    let currentLightboxIndex = 0;
+
+    function openLightbox(index) {
+        currentLightboxIndex = index;
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        const counter = document.getElementById('lightbox-counter');
+        if (!lightbox || !img || !counter) return;
+
+        img.src = galleryImages[index];
+        img.alt = '<?= addslashes($foundService['name']) ?> - ' + (index + 1);
+        counter.textContent = (index + 1) + ' / ' + galleryImages.length;
+        lightbox.style.display = 'flex';
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+
+        // Animate in
+        lightbox.style.opacity = '0';
+        requestAnimationFrame(() => {
+            lightbox.style.transition = 'opacity 0.3s ease';
+            lightbox.style.opacity = '1';
+        });
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox) return;
+        lightbox.style.transition = 'opacity 0.3s ease';
+        lightbox.style.opacity = '0';
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+
+    function lightboxNext() {
+        currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+        updateLightboxImage();
+    }
+
+    function lightboxPrev() {
+        currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightboxImage();
+    }
+
+    function updateLightboxImage() {
+        const img = document.getElementById('lightbox-img');
+        const counter = document.getElementById('lightbox-counter');
+        if (!img || !counter) return;
+
+        img.style.opacity = '0';
+        img.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            img.src = galleryImages[currentLightboxIndex];
+            counter.textContent = (currentLightboxIndex + 1) + ' / ' + galleryImages.length;
+            img.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            img.style.opacity = '1';
+            img.style.transform = 'scale(1)';
+        }, 150);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox || lightbox.style.display === 'none') return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') lightboxNext();
+        if (e.key === 'ArrowLeft') lightboxPrev();
+    });
+
+    // Click backdrop to close
+    document.getElementById('lightbox')?.addEventListener('click', function(e) {
+        if (e.target === this) closeLightbox();
+    });
+
+    // Lucide icons & animations
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
@@ -189,6 +356,10 @@ if (!$foundService) {
         setTimeout(() => {
             document.querySelectorAll('.fade-in-up, .fade-in-right, .fade-in-left').forEach(el => el.classList.add('visible'));
         }, 100);
+        // Re-init lucide for lightbox icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     });
 </script>
 
