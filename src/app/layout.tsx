@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Gowun_Batang, Allura } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const gowunBatang = Gowun_Batang({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-gowun-batang" });
+const allura = Allura({ subsets: ["latin"], weight: ["400"], variable: "--font-allura" });
 
 export const metadata: Metadata = {
     title: "Love Yourself by Anastasiya",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="tr">
-            <body className={`${inter.variable} ${playfair.variable} font-sans`}>{children}</body>
+            <body className={`${gowunBatang.variable} ${allura.variable} font-sans`}>{children}</body>
         </html>
     );
 }

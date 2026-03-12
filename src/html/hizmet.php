@@ -20,10 +20,10 @@ $pageTitle = $foundService ? $foundService['name'] . ' - Love Yourself By Anasta
 require_once 'header.php';
 
 if (!$foundService) {
-    echo '<div class="min-h-screen flex items-center justify-center bg-[#F5F5F0]">
+    echo '<div class="min-h-screen flex items-center justify-center bg-[#ffffff]">
             <div class="text-center">
-                <h1 class="text-4xl font-bold text-[#2C3E50] mb-4">Hizmet Bulunamadı</h1>
-                <a href="/" class="text-[#A65E6E] font-semibold hover:underline">Ana Sayfaya Dön</a>
+                <h1 class="text-4xl font-bold text-[#000000] mb-4">Hizmet Bulunamadı</h1>
+                <a href="/" class="text-[#ec4cc7] font-semibold hover:underline">Ana Sayfaya Dön</a>
             </div>
           </div>';
     require_once 'footer.php';
@@ -31,7 +31,7 @@ if (!$foundService) {
 }
 ?>
 
-<div class="pt-0 bg-[#F5F5F0] text-[#2C3E50] font-sans selection:bg-[#F6D4DB] selection:text-[#2C3E50]">
+<div class="pt-0 bg-[#ffffff] text-[#000000] font-sans selection:bg-[#f9def1] selection:text-[#000000]">
     <!-- Hero Banner -->
     <div class="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
         <img src="<?= htmlspecialchars($foundService['heroImage'] ?? $foundService['image']) ?>"
@@ -44,7 +44,7 @@ if (!$foundService) {
             </h1>
             <div class="flex items-center gap-2 text-white/80 text-sm md:text-base fade-in-up"
                 style="transition-delay: 0.2s">
-                <a href="/" class="hover:text-[#A65E6E] transition-colors">
+                <a href="/" class="hover:text-[#ec4cc7] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -52,7 +52,7 @@ if (!$foundService) {
                     </svg>
                 </a>
                 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                <a href="/#services" class="hover:text-[#A65E6E] transition-colors">
+                <a href="/#services" class="hover:text-[#ec4cc7] transition-colors">
                     <?= htmlspecialchars($foundCategory['title']) ?>
                 </a>
                 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
@@ -77,7 +77,7 @@ if (!$foundService) {
                 </div>
 
                 <!-- Service Title & Description -->
-                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#000000] mb-6">
                     <?= htmlspecialchars($foundService['name']) ?>
                 </h2>
                 <p class="text-[#5D6D7E] text-lg leading-relaxed font-light mb-8 whitespace-pre-line">
@@ -90,10 +90,10 @@ if (!$foundService) {
                         <?php foreach ($foundService['features'] as $feature): ?>
                             <div class="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
                                 <div
-                                    class="w-8 h-8 bg-[#A65E6E]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-[#A65E6E]"></i>
+                                    class="w-8 h-8 bg-[#ec4cc7]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="sparkles" class="w-4 h-4 text-[#ec4cc7]"></i>
                                 </div>
-                                <span class="text-sm font-medium text-[#2C3E50]">
+                                <span class="text-sm font-medium text-[#000000]">
                                     <?= htmlspecialchars($feature) ?>
                                 </span>
                             </div>
@@ -108,25 +108,25 @@ if (!$foundService) {
                     <!-- Reservation Card -->
                     <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-12 bg-[#A65E6E] rounded-full flex items-center justify-center">
+                            <div class="w-12 h-12 bg-[#ec4cc7] rounded-full flex items-center justify-center">
                                 <i data-lucide="clock" class="w-5 h-5 text-white"></i>
                             </div>
                             <div>
                                 <span class="block text-sm text-[#5D6D7E] font-light">Süre</span>
-                                <span class="block text-lg font-bold text-[#2C3E50]">
+                                <span class="block text-lg font-bold text-[#000000]">
                                     <?= htmlspecialchars($foundService['duration']) ?>
                                 </span>
                             </div>
                         </div>
                         <a href="<?= htmlspecialchars($RANDEVU_URL) ?>" target="_blank" rel="noopener noreferrer"
-                            class="block w-full py-4 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-center text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg">
+                            class="block w-full py-4 bg-[#ec4cc7] hover:bg-[#8E4D5B] text-white text-center text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg">
                             Randevu Al
                         </a>
                     </div>
 
                     <!-- Reservation Note -->
-                    <div class="bg-[#F6D4DB]/30 rounded-2xl p-6 mb-8">
-                        <h4 class="font-bold text-[#2C3E50] mb-2">Randevudan Önce;</h4>
+                    <div class="bg-[#f9def1]/30 rounded-2xl p-6 mb-8">
+                        <h4 class="font-bold text-[#000000] mb-2">Randevudan Önce;</h4>
                         <ul class="text-[#5D6D7E] text-sm font-light space-y-2">
                             <li>• Randevunuza 10 dakika önce gelmenizi rica ederiz.</li>
                             <li>• İptal ve değişiklik için en az 24 saat öncesinden bilgilendiriniz.</li>
@@ -136,7 +136,7 @@ if (!$foundService) {
 
                     <!-- Other Services -->
                     <div class="bg-white rounded-2xl shadow-xl p-6">
-                        <h4 class="font-bold text-[#2C3E50] mb-4 text-lg">Diğer Hizmetlerimiz</h4>
+                        <h4 class="font-bold text-[#000000] mb-4 text-lg">Diğer Hizmetlerimiz</h4>
                         <div class="space-y-2">
                             <?php
                             $otherCount = 0;
@@ -148,13 +148,13 @@ if (!$foundService) {
                                 $otherCount++;
                                 ?>
                                 <a href="hizmet.php?slug=<?= htmlspecialchars($s['slug']) ?>"
-                                    class="flex items-center gap-3 p-3 rounded-xl hover:bg-[#F5F5F0] transition-colors group">
+                                    class="flex items-center gap-3 p-3 rounded-xl hover:bg-[#ffffff] transition-colors group">
                                     <img src="<?= htmlspecialchars($s['image']) ?>"
                                         alt="<?= htmlspecialchars($s['name']) ?>"
                                         class="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
                                     <div class="flex-1">
                                         <span
-                                            class="block text-sm font-semibold text-[#2C3E50] group-hover:text-[#A65E6E] transition-colors">
+                                            class="block text-sm font-semibold text-[#000000] group-hover:text-[#ec4cc7] transition-colors">
                                             <?= htmlspecialchars($s['name']) ?>
                                         </span>
                                         <span class="block text-xs text-[#5D6D7E]">
@@ -162,7 +162,7 @@ if (!$foundService) {
                                         </span>
                                     </div>
                                     <i data-lucide="arrow-right"
-                                        class="w-4 h-4 text-[#A65E6E] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                        class="w-4 h-4 text-[#ec4cc7] opacity-0 group-hover:opacity-100 transition-opacity"></i>
                                 </a>
                             <?php endforeach; ?>
                         </div>
@@ -173,7 +173,7 @@ if (!$foundService) {
     </div>
 
     <!-- Footer Link -->
-    <div class="bg-[#A65E6E] py-6 text-center">
+    <div class="bg-[#ec4cc7] py-6 text-center">
         <a href="/"
             class="inline-block text-white font-semibold uppercase tracking-widest text-sm hover:text-white/80 transition-colors">
             &larr; Ana Sayfaya Dön

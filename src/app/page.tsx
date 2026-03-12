@@ -109,7 +109,7 @@ const GoogleReviewsSummary = () => {
     return (
         <div className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-4">
-                <span className="text-5xl font-bold text-[#2C3E50]">{data.rating}</span>
+                <span className="text-5xl font-bold text-[#000000]">{data.rating}</span>
                 <div className="flex flex-col items-start">
                     <StarRating rating={Math.round(data.rating)} size={22} />
                     <span className="text-[#5D6D7E] text-sm font-light mt-1">
@@ -129,7 +129,7 @@ const GoogleReviewsCards = () => {
         return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[1, 2, 3].map(i => (
-                    <div key={i} className="bg-[#F5F5F0] rounded-2xl p-6 animate-pulse">
+                    <div key={i} className="bg-[#ffffff] rounded-2xl p-6 animate-pulse">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
                             <div className="space-y-2">
@@ -153,7 +153,7 @@ const GoogleReviewsCards = () => {
         return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
     };
 
-    const colors = ['#A65E6E', '#4285F4', '#34A853', '#EA4335', '#FBBC05'];
+    const colors = ['#ec4cc7', '#4285F4', '#34A853', '#EA4335', '#FBBC05'];
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +164,7 @@ const GoogleReviewsCards = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    className="bg-[#F5F5F0] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+                    className="bg-[#ffffff] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
                 >
                     {/* Author */}
                     <div className="flex items-center gap-3 mb-4">
@@ -183,7 +183,7 @@ const GoogleReviewsCards = () => {
                             </div>
                         )}
                         <div>
-                            <h4 className="font-semibold text-[#2C3E50] text-sm">{review.author_name}</h4>
+                            <h4 className="font-semibold text-[#000000] text-sm">{review.author_name}</h4>
                             <span className="text-[#5D6D7E] text-xs font-light">{review.relative_time_description}</span>
                         </div>
                         <div className="ml-auto">
@@ -271,12 +271,12 @@ export default function LongospherePage() {
     };
 
     return (
-        <div className="min-h-screen bg-[#F5F5F0] text-[#2C3E50] font-sans selection:bg-[#F6D4DB] selection:text-[#2C3E50] overflow-x-hidden pb-[72px] lg:pb-0">
+        <div className="min-h-screen bg-[#ffffff] text-[#000000] font-sans selection:bg-[#f9def1] selection:text-[#000000] overflow-x-hidden pb-[72px] lg:pb-0">
 
             {/* Mobile Bottom Navbar */}
             {!isMobileMenuOpen && (
                 <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden">
-                    <div className="bg-[#A65E6E] flex items-stretch shadow-[0_-2px_20px_rgba(0,0,0,0.15)]">
+                    <div className="bg-[#ec4cc7] flex items-stretch shadow-[0_-2px_20px_rgba(0,0,0,0.15)]">
                         <a
                             href={RANDEVU_URL}
                             target="_blank"
@@ -354,7 +354,7 @@ export default function LongospherePage() {
                                 >
                                     <Link
                                         href={link.href}
-                                        className={`text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300 flex items-center gap-1 ${isScrolled ? 'text-[#2C3E50]' : 'text-[#2C3E50]'}`}
+                                        className={`text-sm font-medium uppercase tracking-wide hover:text-[#ec4cc7] transition-colors duration-300 flex items-center gap-1 ${isScrolled ? 'text-[#000000]' : 'text-[#000000]'}`}
                                     >
                                         {link.name}
                                         <ChevronDown size={14} className={`transition-transform duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
@@ -373,14 +373,14 @@ export default function LongospherePage() {
                                                 <div className="p-2">
                                                     {serviceCategories.map((cat, ci) => (
                                                         <div key={ci}>
-                                                            <div className="px-4 py-2 text-xs font-bold text-[#A65E6E] uppercase tracking-widest">
+                                                            <div className="px-4 py-2 text-xs font-bold text-[#ec4cc7] uppercase tracking-widest">
                                                                 {cat.title}
                                                             </div>
                                                             {cat.services.map((srv, si) => (
                                                                 <Link
                                                                     key={si}
                                                                     href={`/hizmet/${srv.slug}`}
-                                                                    className="block px-4 py-2.5 text-sm text-[#2C3E50] hover:bg-[#F6D4DB]/30 hover:text-[#A65E6E] rounded-lg transition-colors font-medium"
+                                                                    className="block px-4 py-2.5 text-sm text-[#000000] hover:bg-[#f9def1]/30 hover:text-[#ec4cc7] rounded-lg transition-colors font-medium"
                                                                     onClick={() => setIsServicesDropdownOpen(false)}
                                                                 >
                                                                     {srv.name}
@@ -402,7 +402,7 @@ export default function LongospherePage() {
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300 ${isScrolled ? 'text-[#2C3E50]' : 'text-[#2C3E50]'}`}
+                                    className={`text-sm font-medium uppercase tracking-wide hover:text-[#ec4cc7] transition-colors duration-300 ${isScrolled ? 'text-[#000000]' : 'text-[#000000]'}`}
                                 >
                                     {link.name}
                                 </a>
@@ -410,23 +410,23 @@ export default function LongospherePage() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className={`text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300 ${isScrolled ? 'text-[#2C3E50]' : 'text-[#2C3E50]'}`}
+                                    className={`text-sm font-medium uppercase tracking-wide hover:text-[#ec4cc7] transition-colors duration-300 ${isScrolled ? 'text-[#000000]' : 'text-[#000000]'}`}
                                 >
                                     {link.name}
                                 </Link>
                             )
                         ))}
-                        <a href={RANDEVU_URL} target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-sm font-semibold uppercase tracking-wide rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <a href={RANDEVU_URL} target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-[#ec4cc7] hover:bg-[#8E4D5B] text-white text-sm font-semibold uppercase tracking-wide rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
                             Randevu Al
                         </a>
                     </nav>
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="lg:hidden relative z-[60] text-[#A65E6E]"
+                        className="lg:hidden relative z-[60] text-[#ec4cc7]"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
-                        {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} color={isScrolled ? '#2C3E50' : '#2C3E50'} />}
+                        {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} color={isScrolled ? '#000000' : '#000000'} />}
                     </button>
                 </Container>
 
@@ -438,7 +438,7 @@ export default function LongospherePage() {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: '100%' }}
                             transition={{ type: "tween", duration: 0.4 }}
-                            className="fixed inset-0 bg-[#F6D4DB] z-[55] flex flex-col items-center justify-start p-8 pt-28 space-y-6 overflow-y-auto min-h-screen"
+                            className="fixed inset-0 bg-[#f9def1] z-[55] flex flex-col items-center justify-start p-8 pt-28 space-y-6 overflow-y-auto min-h-screen"
                         >
                             {navLinks.map((link, index) => (
                                 <motion.div
@@ -452,7 +452,7 @@ export default function LongospherePage() {
                                         <div>
                                             <button
                                                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                                                className="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors inline-flex items-center gap-2"
+                                                className="text-[#000000] text-2xl font-light tracking-wide hover:text-[#ec4cc7] transition-colors inline-flex items-center gap-2"
                                             >
                                                 {link.name}
                                                 <ChevronDown size={20} className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -469,14 +469,14 @@ export default function LongospherePage() {
                                                         <div className="mt-3 space-y-1">
                                                             {serviceCategories.map((cat, ci) => (
                                                                 <div key={ci}>
-                                                                    <div className="text-xs font-bold text-[#A65E6E] uppercase tracking-widest py-2">
+                                                                    <div className="text-xs font-bold text-[#ec4cc7] uppercase tracking-widest py-2">
                                                                         {cat.title}
                                                                     </div>
                                                                     {cat.services.map((srv, si) => (
                                                                         <Link
                                                                             key={si}
                                                                             href={`/hizmet/${srv.slug}`}
-                                                                            className="block py-1.5 text-[#2C3E50] text-base font-light hover:text-[#A65E6E] transition-colors"
+                                                                            className="block py-1.5 text-[#000000] text-base font-light hover:text-[#ec4cc7] transition-colors"
                                                                             onClick={() => { setIsMobileMenuOpen(false); setMobileServicesOpen(false); }}
                                                                         >
                                                                             {srv.name}
@@ -494,7 +494,7 @@ export default function LongospherePage() {
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors"
+                                            className="text-[#000000] text-2xl font-light tracking-wide hover:text-[#ec4cc7] transition-colors"
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
                                             {link.name}
@@ -502,7 +502,7 @@ export default function LongospherePage() {
                                     ) : (
                                         <Link
                                             href={link.href}
-                                            className="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors"
+                                            className="text-[#000000] text-2xl font-light tracking-wide hover:text-[#ec4cc7] transition-colors"
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
                                             {link.name}
@@ -517,7 +517,7 @@ export default function LongospherePage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.8 }}
-                                className="mt-8 px-8 py-3 bg-[#A65E6E] text-white text-lg font-medium rounded-full"
+                                className="mt-8 px-8 py-3 bg-[#ec4cc7] text-white text-lg font-medium rounded-full"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Randevu Al
@@ -528,7 +528,7 @@ export default function LongospherePage() {
             </header>
 
             {/* Hero Section */}
-            <div className="relative h-screen w-full overflow-hidden bg-[#F6D4DB]">
+            <div className="relative h-screen w-full overflow-hidden bg-[#f9def1]">
                 <motion.div
                     style={{ opacity: heroOpacity, y: heroY }}
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -548,20 +548,20 @@ export default function LongospherePage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/20" />
                 </motion.div>
 
-                <Container className="relative h-full flex flex-col justify-center items-center text-center text-[#2C3E50] pt-20">
+                <Container className="relative h-full flex flex-col justify-center items-center text-center text-[#000000] pt-20">
                     <FadeIn delay={0.2} direction="down">
-                        <h2 className="text-lg md:text-xl font-bold tracking-[0.4em] uppercase mb-4 text-[#A65E6E]">
+                        <h2 className="text-lg md:text-xl font-bold tracking-[0.4em] uppercase mb-4 text-[#ec4cc7]">
                             Güzelliğin Yeni Adresi
                         </h2>
                     </FadeIn>
                     <FadeIn delay={0.4}>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-tight text-[#2C3E50]">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-tight text-[#000000]">
                             Kendini <br className="hidden md:block" />
-                            <span className="italic font-serif font-light text-[#A65E6E]">Yeniden</span> Keşfet
+                            <span className="italic font-serif font-light text-[#ec4cc7]">Yeniden</span> Keşfet
                         </h1>
                     </FadeIn>
                     <FadeIn delay={0.6}>
-                        <p className="max-w-xl mx-auto text-lg md:text-xl text-[#2C3E50]/90 font-light leading-relaxed mb-12">
+                        <p className="max-w-xl mx-auto text-lg md:text-xl text-[#000000]/90 font-light leading-relaxed mb-12">
                             Uzman dokunuşlar, premium ürünler ve kişiye özel bakım ritüelleriyle ışıltınızı ortaya çıkarın.
                         </p>
                     </FadeIn>
@@ -573,12 +573,12 @@ export default function LongospherePage() {
                         transition={{ delay: 1.2, duration: 1 }}
                         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
                     >
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#2C3E50]/60">Aşağı Kaydır</span>
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#000000]/60">Aşağı Kaydır</span>
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                         >
-                            <ChevronDown className="text-[#2C3E50]/80" />
+                            <ChevronDown className="text-[#000000]/80" />
                         </motion.div>
                     </motion.div>
                 </Container>
@@ -589,9 +589,9 @@ export default function LongospherePage() {
                 <Container>
                     <div className="text-center mb-16">
                         <FadeIn>
-                            <h3 className="text-[#A65E6E] font-bold text-sm tracking-[0.2em] uppercase mb-4">Özel Bakım</h3>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E50] mb-6">Hizmetlerimiz</h2>
-                            <div className="w-24 h-1 bg-[#A65E6E] mx-auto rounded-full"></div>
+                            <h3 className="text-[#ec4cc7] font-bold text-sm tracking-[0.2em] uppercase mb-4">Özel Bakım</h3>
+                            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">Hizmetlerimiz</h2>
+                            <div className="w-24 h-1 bg-[#ec4cc7] mx-auto rounded-full"></div>
                         </FadeIn>
                     </div>
 
@@ -607,7 +607,7 @@ export default function LongospherePage() {
                                 <FadeIn key={catIndex} delay={catIndex * 0.15}>
                                     <div>
                                         {/* Category Title */}
-                                        <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E50] mb-4 tracking-tight uppercase" style={{ fontFamily: "'Georgia', serif" }}>
+                                        <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4 tracking-tight uppercase font-logo">
                                             {category.title}
                                         </h2>
                                         <p className="text-[#5D6D7E] text-base md:text-lg font-light mb-10 max-w-lg">
@@ -624,8 +624,8 @@ export default function LongospherePage() {
                                                         key={sIndex}
                                                         onClick={() => setActiveService(isActive ? null : serviceKey)}
                                                         className={`flex items-center gap-3 w-fit px-6 py-3 rounded-full text-sm font-bold tracking-wide transition-all duration-300 ${isActive
-                                                            ? 'bg-[#2C3E50] text-white shadow-lg'
-                                                            : 'bg-[#A65E6E]/15 text-[#2C3E50] hover:bg-[#A65E6E] hover:text-white'
+                                                            ? 'bg-[#000000] text-white shadow-lg'
+                                                            : 'bg-[#ec4cc7]/15 text-[#000000] hover:bg-[#ec4cc7] hover:text-white'
                                                             }`}
                                                     >
                                                         <Sparkles size={16} />
@@ -646,23 +646,23 @@ export default function LongospherePage() {
                                                     transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
                                                 >
                                                     {/* Service Detail Card */}
-                                                    <div className="bg-[#F5F5F0] rounded-2xl overflow-hidden shadow-xl">
+                                                    <div className="bg-[#ffffff] rounded-2xl overflow-hidden shadow-xl">
                                                         <div className="grid grid-cols-1 md:grid-cols-2">
                                                             <div className="p-8 md:p-12 flex flex-col justify-center">
-                                                                <h3 className="text-2xl md:text-3xl font-bold text-[#2C3E50] mb-4">
+                                                                <h3 className="text-2xl md:text-3xl font-bold text-[#000000] mb-4">
                                                                     {selectedService.name}
                                                                 </h3>
                                                                 <p className="text-[#5D6D7E] text-base leading-relaxed mb-6 font-light">
                                                                     {selectedService.details}
                                                                 </p>
-                                                                <div className="flex items-center gap-2 text-[#A65E6E] font-semibold text-sm mb-6">
+                                                                <div className="flex items-center gap-2 text-[#ec4cc7] font-semibold text-sm mb-6">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                                         <circle cx="12" cy="12" r="10" />
                                                                         <polyline points="12 6 12 12 16 14" />
                                                                     </svg>
                                                                     {selectedService.duration}
                                                                 </div>
-                                                                <Link href={`/hizmet/${selectedService.slug}`} className="w-fit px-6 py-3 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-md inline-block">
+                                                                <Link href={`/hizmet/${selectedService.slug}`} className="w-fit px-6 py-3 bg-[#ec4cc7] hover:bg-[#8E4D5B] text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-md inline-block">
                                                                     Şimdi Keşfet
                                                                 </Link>
                                                             </div>
@@ -702,10 +702,10 @@ export default function LongospherePage() {
 
                     {/* View All Services Button */}
                     <FadeIn delay={0.4}>
-                        <div className="mt-16 text-center text-[#2C3E50]">
+                        <div className="mt-16 text-center text-[#000000]">
                             <button
                                 onClick={() => setIsShowroomOpen(true)}
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-[#A65E6E] text-[#A65E6E] hover:bg-[#A65E6E] hover:text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-lg"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-[#ec4cc7] text-[#ec4cc7] hover:bg-[#ec4cc7] hover:text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-lg"
                             >
                                 Tüm Hizmetlerimiz
                                 <ArrowRight size={16} />
@@ -716,7 +716,7 @@ export default function LongospherePage() {
             </Section>
 
             {/* Intro Section */}
-            <Section className="bg-[#F5F5F0]">
+            <Section className="bg-[#ffffff]">
                 <Container>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <FadeIn direction="right">
@@ -727,7 +727,7 @@ export default function LongospherePage() {
                                     className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent">
-                                    <div className="flex items-center gap-2 text-[#A65E6E]">
+                                    <div className="flex items-center gap-2 text-[#ec4cc7]">
                                         <User size={20} />
                                         <span className="text-sm uppercase tracking-widest font-semibold">Uzman Kadro</span>
                                     </div>
@@ -736,12 +736,12 @@ export default function LongospherePage() {
                         </FadeIn>
                         <FadeIn direction="left">
                             <div>
-                                <h3 className="text-[#A65E6E] font-bold text-sm tracking-[0.2em] uppercase mb-4">
+                                <h3 className="text-[#ec4cc7] font-bold text-sm tracking-[0.2em] uppercase mb-4">
                                     Love Yourself Güzellik
                                 </h3>
-                                <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E50] mb-8 leading-tight">
+                                <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-8 leading-tight">
                                     Estetik ve Bakımın <br />
-                                    <span className="font-serif italic font-normal text-[#A65E6E]">Buluştuğu Nokta</span>
+                                    <span className="font-serif italic font-normal text-[#ec4cc7]">Buluştuğu Nokta</span>
                                 </h2>
                                 <p className="text-[#5D6D7E] text-lg leading-relaxed mb-6 font-light">
                                     Modern teknolojiyi geleneksel bakım ritüelleriyle birleştiren merkezimizde, cildinizin ihtiyaç duyduğu tüm bakımları sunuyoruz.
@@ -751,9 +751,9 @@ export default function LongospherePage() {
                                     Dünyaca ünlü markaların ürünleri ve sertifikalı uzmanlarımızla, kendinizi özel hissedeceğiniz
                                     bir deneyim sizi bekliyor.
                                 </p>
-                                <Link href="#services" className="inline-flex items-center gap-2 text-[#2C3E50] font-semibold uppercase tracking-widest border-b-2 border-[#A65E6E] pb-1 hover:text-[#A65E6E] transition-colors">
+                                <button onClick={() => setIsShowroomOpen(true)} className="inline-flex items-center gap-2 text-[#000000] font-semibold uppercase tracking-widest border-b-2 border-[#ec4cc7] pb-1 hover:text-[#ec4cc7] transition-colors">
                                     Hizmetleri İncele <ArrowRight size={16} />
-                                </Link>
+                                </button>
                             </div>
                         </FadeIn>
                     </div>
@@ -762,35 +762,35 @@ export default function LongospherePage() {
 
 
             {/* Featured Experience - Parallax */}
-            <section className="relative py-32 bg-[#F6D4DB] overflow-hidden">
+            <section className="relative py-32 bg-[#f9def1] overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/soft-wallpaper.png')] mix-blend-overlay"></div>
                 <Container className="relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <FadeIn direction="right">
                             <div className="space-y-8">
-                                <h3 className="text-[#A65E6E] font-bold text-sm tracking-[0.2em] uppercase">Size Özel</h3>
-                                <h2 className="text-4xl md:text-6xl font-bold text-[#2C3E50] leading-tight">
+                                <h3 className="text-[#ec4cc7] font-bold text-sm tracking-[0.2em] uppercase">Size Özel</h3>
+                                <h2 className="text-4xl md:text-6xl font-bold text-[#000000] leading-tight">
                                     Ruhunuzu ve Bedeninizi <br />
-                                    <span className="font-serif italic font-light text-[#A65E6E]">Dinlendirin</span>
+                                    <span className="font-serif italic font-light text-[#ec4cc7]">Dinlendirin</span>
                                 </h2>
-                                <p className="text-[#2C3E50]/80 text-lg font-light leading-relaxed">
+                                <p className="text-[#000000]/80 text-lg font-light leading-relaxed">
                                     Love Yourself'de sadece bakım yaptırmıyor, yenileniyorsunuz. Aromaterapi masajları, cilt yenileme seansları,
                                     detoks programları ve makyaj atölyeleri ile kendinize tam bir iyilik yapın.
                                 </p>
                                 <div className="grid grid-cols-2 gap-8 pt-4">
                                     <div className="flex flex-col gap-2">
-                                        <div className="w-12 h-12 bg-[#A65E6E] rounded-full flex items-center justify-center text-white mb-2">
+                                        <div className="w-12 h-12 bg-[#ec4cc7] rounded-full flex items-center justify-center text-white mb-2">
                                             <Coffee />
                                         </div>
-                                        <h4 className="text-[#2C3E50] font-bold text-lg">Detoks Bar</h4>
-                                        <p className="text-[#2C3E50]/60 text-sm font-light">Sağlıklı içecekler ve atıştırmalıklar.</p>
+                                        <h4 className="text-[#000000] font-bold text-lg">Detoks Bar</h4>
+                                        <p className="text-[#000000]/60 text-sm font-light">Sağlıklı içecekler ve atıştırmalıklar.</p>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                        <div className="w-12 h-12 bg-[#A65E6E] rounded-full flex items-center justify-center text-white mb-2">
+                                        <div className="w-12 h-12 bg-[#ec4cc7] rounded-full flex items-center justify-center text-white mb-2">
                                             <User />
                                         </div>
-                                        <h4 className="text-[#2C3E50] font-bold text-lg">VIP Odalar</h4>
-                                        <p className="text-[#2C3E50]/60 text-sm font-light">Size özel hazırlanmış bakım alanları.</p>
+                                        <h4 className="text-[#000000] font-bold text-lg">VIP Odalar</h4>
+                                        <p className="text-[#000000]/60 text-sm font-light">Size özel hazırlanmış bakım alanları.</p>
                                     </div>
                                 </div>
                             </div>
@@ -809,13 +809,13 @@ export default function LongospherePage() {
             </section>
 
             {/* Blog Section */}
-            <Section className="bg-[#F5F5F0]" id="blog">
+            <Section className="bg-[#ffffff]" id="blog">
                 <Container>
                     <div className="text-center mb-16">
                         <FadeIn>
-                            <h3 className="text-[#A65E6E] font-bold text-sm tracking-[0.2em] uppercase mb-4">Blog</h3>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E50] mb-6">Güzellik Rehberi</h2>
-                            <div className="w-24 h-1 bg-[#A65E6E] mx-auto rounded-full mb-6"></div>
+                            <h3 className="text-[#ec4cc7] font-bold text-sm tracking-[0.2em] uppercase mb-4">Blog</h3>
+                            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">Güzellik Rehberi</h2>
+                            <div className="w-24 h-1 bg-[#ec4cc7] mx-auto rounded-full mb-6"></div>
                             <p className="max-w-lg mx-auto text-[#5D6D7E] text-lg font-light">
                                 Bakım ipuçları, güzellik trendleri ve uzman önerileriyle kendinize en iyi şekilde bakın.
                             </p>
@@ -855,22 +855,22 @@ export default function LongospherePage() {
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                         <div className="absolute top-4 left-4">
-                                            <span className="px-3 py-1 bg-[#A65E6E] text-white text-xs font-bold uppercase tracking-wider rounded-full">
+                                            <span className="px-3 py-1 bg-[#ec4cc7] text-white text-xs font-bold uppercase tracking-wider rounded-full">
                                                 {post.category}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="p-6">
-                                        <span className="text-[#A65E6E] text-xs font-medium tracking-wide">
+                                        <span className="text-[#ec4cc7] text-xs font-medium tracking-wide">
                                             {post.date}
                                         </span>
-                                        <h3 className="text-xl font-bold text-[#2C3E50] mt-2 mb-3 group-hover:text-[#A65E6E] transition-colors leading-snug">
+                                        <h3 className="text-xl font-bold text-[#000000] mt-2 mb-3 group-hover:text-[#ec4cc7] transition-colors leading-snug">
                                             {post.title}
                                         </h3>
                                         <p className="text-[#5D6D7E] text-sm leading-relaxed font-light mb-4">
                                             {post.excerpt}
                                         </p>
-                                        <span className="inline-flex items-center gap-2 text-[#A65E6E] text-sm font-semibold uppercase tracking-wide group-hover:gap-3 transition-all">
+                                        <span className="inline-flex items-center gap-2 text-[#ec4cc7] text-sm font-semibold uppercase tracking-wide group-hover:gap-3 transition-all">
                                             Devamını Oku <ArrowRight size={14} />
                                         </span>
                                     </div>
@@ -893,10 +893,10 @@ export default function LongospherePage() {
                                     <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
                                     <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                                 </svg>
-                                <h3 className="text-[#A65E6E] font-bold text-sm tracking-[0.2em] uppercase">Google Yorumları</h3>
+                                <h3 className="text-[#ec4cc7] font-bold text-sm tracking-[0.2em] uppercase">Google Yorumları</h3>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E50] mb-6">Misafirlerimiz Ne Diyor?</h2>
-                            <div className="w-24 h-1 bg-[#A65E6E] mx-auto rounded-full mb-8"></div>
+                            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">Misafirlerimiz Ne Diyor?</h2>
+                            <div className="w-24 h-1 bg-[#ec4cc7] mx-auto rounded-full mb-8"></div>
                         </FadeIn>
 
                         {/* Rating Summary */}
@@ -917,7 +917,7 @@ export default function LongospherePage() {
                                 href="https://www.google.com/maps/search/Love+Yourself+by+Anastasiya+B%C3%BCy%C3%BCk%C3%A7ekmece"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-8 py-3 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg"
+                                className="inline-flex items-center gap-2 px-8 py-3 bg-[#ec4cc7] hover:bg-[#8E4D5B] text-white text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg"
                             >
                                 Yorum Bırakın
                                 <ArrowRight size={16} />
@@ -928,30 +928,30 @@ export default function LongospherePage() {
             </Section>
 
             {/* Footer */}
-            <footer className="bg-[#F6D4DB] text-[#2C3E50] pt-20 pb-10 border-t border-[#2C3E50]/10">
+            <footer className="bg-[#f9def1] text-[#000000] pt-20 pb-10 border-t border-[#000000]/10">
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                         <div className="space-y-6">
                             <Link href="/" className="block text-center md:text-left">
                                 <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-12 w-auto mx-auto md:mx-0 transition-transform duration-300 hover:scale-105" />
                             </Link>
-                            <p className="text-[#2C3E50]/70 text-sm font-light leading-relaxed">
+                            <p className="text-[#000000]/70 text-sm font-light leading-relaxed">
                                 Şehrin kalbinde, stresten uzak, kendinizle baş başa kalacağınız özel bir kaçış noktası.
                             </p>
                             <div className="flex gap-4">
-                                <a href="https://www.instagram.com/loveyourselfbyanastasiya/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#2C3E50]/5 hover:bg-[#A65E6E] flex items-center justify-center transition-colors duration-300 text-[#2C3E50] hover:text-white">
+                                <a href="https://www.instagram.com/loveyourselfbyanastasiya/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#000000]/5 hover:bg-[#ec4cc7] flex items-center justify-center transition-colors duration-300 text-[#000000] hover:text-white">
                                     <Instagram size={18} />
                                 </a>
                             </div>
                         </div>
 
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-[#A65E6E]">Hızlı Menü</h4>
+                            <h4 className="text-lg font-bold mb-6 text-[#ec4cc7]">Hızlı Menü</h4>
                             <ul className="space-y-3">
                                 {navLinks.slice(0, 4).map(link => (
                                     <li key={link.name}>
-                                        <Link href={link.href} className="text-[#2C3E50]/70 hover:text-[#2C3E50] text-sm transition-colors flex items-center gap-2">
-                                            <ArrowRight size={12} className="text-[#A65E6E]" /> {link.name}
+                                        <Link href={link.href} className="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors flex items-center gap-2">
+                                            <ArrowRight size={12} className="text-[#ec4cc7]" /> {link.name}
                                         </Link>
                                     </li>
                                 ))}
@@ -959,40 +959,40 @@ export default function LongospherePage() {
                         </div>
 
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-[#A65E6E]">Bilgilendirme</h4>
+                            <h4 className="text-lg font-bold mb-6 text-[#ec4cc7]">Bilgilendirme</h4>
                             <ul className="space-y-3">
-                                <li><Link href="#" className="text-[#2C3E50]/70 hover:text-[#2C3E50] text-sm transition-colors">KVKK Aydınlatma Metni</Link></li>
-                                <li><Link href="#" className="text-[#2C3E50]/70 hover:text-[#2C3E50] text-sm transition-colors">Gizlilik Politikası</Link></li>
-                                <li><Link href="#" className="text-[#2C3E50]/70 hover:text-[#2C3E50] text-sm transition-colors">Çerez Politikası</Link></li>
-                                <li><Link href="#" className="text-[#2C3E50]/70 hover:text-[#2C3E50] text-sm transition-colors">Mesafeli Satış Sözleşmesi</Link></li>
+                                <li><Link href="#" className="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">KVKK Aydınlatma Metni</Link></li>
+                                <li><Link href="#" className="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Gizlilik Politikası</Link></li>
+                                <li><Link href="#" className="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Çerez Politikası</Link></li>
+                                <li><Link href="#" className="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Mesafeli Satış Sözleşmesi</Link></li>
                             </ul>
                         </div>
 
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-[#A65E6E]">İletişim</h4>
+                            <h4 className="text-lg font-bold mb-6 text-[#ec4cc7]">İletişim</h4>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
-                                    <MapPin size={20} className="text-[#A65E6E] mt-1 shrink-0" />
-                                    <span className="text-[#2C3E50]/70 text-sm font-light">Güzelce Mah. Geçit Cd. No:9 D:3D, 34530 Büyükçekmece/İstanbul</span>
+                                    <MapPin size={20} className="text-[#ec4cc7] mt-1 shrink-0" />
+                                    <span className="text-[#000000]/70 text-sm font-light">Güzelce Mah. Geçit Cd. No:9 D:3D, 34530 Büyükçekmece/İstanbul</span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Phone size={20} className="text-[#A65E6E]" />
-                                    <a href="https://wa.me/905385296388" target="_blank" rel="noopener noreferrer" className="text-[#2C3E50]/70 text-sm font-light hover:text-[#A65E6E] transition-colors">+90 538 529 63 88</a>
+                                    <Phone size={20} className="text-[#ec4cc7]" />
+                                    <a href="https://wa.me/905385296388" target="_blank" rel="noopener noreferrer" className="text-[#000000]/70 text-sm font-light hover:text-[#ec4cc7] transition-colors">+90 538 529 63 88</a>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Mail size={20} className="text-[#A65E6E]" />
-                                    <span className="text-[#2C3E50]/70 text-sm font-light">info@loveyourself.com</span>
+                                    <Mail size={20} className="text-[#ec4cc7]" />
+                                    <span className="text-[#000000]/70 text-sm font-light">info@loveyourself.com</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <div className="pt-8 border-t border-[#2C3E50]/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-[#2C3E50]/40 text-xs font-light">
+                    <div className="pt-8 border-t border-[#000000]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-[#000000]/40 text-xs font-light">
                             &copy; {new Date().getFullYear()} Love Yourself By Anastasiya. Tüm hakları saklıdır.
                         </p>
                         <div className="flex gap-6">
-                            <span className="text-[#2C3E50]/40 text-xs font-light tracking-widest uppercase">Designed by Antigravity</span>
+                            <span className="text-[#000000]/40 text-xs font-light tracking-widest uppercase">Designed by Antigravity</span>
                         </div>
                     </div>
                 </Container>
@@ -1011,10 +1011,10 @@ export default function LongospherePage() {
                         <div className="min-h-screen pb-20">
                             {/* Header */}
                             <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-gray-100 py-6 px-4 md:px-8 flex justify-between items-center shadow-sm">
-                                <h2 className="text-xl md:text-2xl font-bold tracking-widest uppercase text-[#2C3E50]">Tüm Hizmetlerimiz</h2>
+                                <h2 className="text-xl md:text-2xl font-bold tracking-widest uppercase text-[#000000]">Tüm Hizmetlerimiz</h2>
                                 <button
                                     onClick={() => setIsShowroomOpen(false)}
-                                    className="p-2 text-[#5D6D7E] hover:text-[#A65E6E] transition-colors rounded-full hover:bg-[#F5F5F0]"
+                                    className="p-2 text-[#5D6D7E] hover:text-[#ec4cc7] transition-colors rounded-full hover:bg-[#ffffff]"
                                 >
                                     <X size={28} />
                                 </button>
@@ -1029,7 +1029,7 @@ export default function LongospherePage() {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.05 }}
-                                            className="group cursor-pointer bg-[#F5F5F0] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+                                            className="group cursor-pointer bg-[#ffffff] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
                                         >
                                             <div className="relative h-64 overflow-hidden shrink-0">
                                                 <img
@@ -1040,16 +1040,16 @@ export default function LongospherePage() {
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-grow">
-                                                <span className="text-xs font-bold text-[#A65E6E] uppercase tracking-wider mb-2 block">{cat.title}</span>
-                                                <h3 className="text-xl font-bold text-[#2C3E50] mb-3">{service.name}</h3>
+                                                <span className="text-xs font-bold text-[#ec4cc7] uppercase tracking-wider mb-2 block">{cat.title}</span>
+                                                <h3 className="text-xl font-bold text-[#000000] mb-3">{service.name}</h3>
                                                 <p className="text-[#5D6D7E] text-sm font-light line-clamp-3 mb-6 flex-grow">
                                                     {service.details}
                                                 </p>
-                                                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#2C3E50]/10">
-                                                    <span className="text-xs font-semibold text-[#2C3E50] border border-[#2C3E50]/20 px-3 py-1 rounded-full">{service.duration}</span>
+                                                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#000000]/10">
+                                                    <span className="text-xs font-semibold text-[#000000] border border-[#000000]/20 px-3 py-1 rounded-full">{service.duration}</span>
                                                     <Link
                                                         href={`/hizmet/${service.slug}`}
-                                                        className="text-[#A65E6E] font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+                                                        className="text-[#ec4cc7] font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
                                                         onClick={() => setIsShowroomOpen(false)}
                                                     >
                                                         Keşfet <ArrowRight size={14} />

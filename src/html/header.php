@@ -13,9 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#A65E6E',
-                        secondary: '#2C3E50',
-                        light: '#F5F5F0',
+                        primary: '#ec4cc7',
+                        secondary: '#000000',
+                        light: '#ffffff',
                     }
                 }
             }
@@ -83,7 +83,7 @@
     </style>
 </head>
 
-<body class="min-h-screen bg-[#F5F5F0] text-[#2C3E50] pb-[72px] lg:pb-0 overflow-x-hidden"
+<body class="min-h-screen bg-[#ffffff] text-[#000000] pb-[72px] lg:pb-0 overflow-x-hidden"
     x-data="{ isMobileMenuOpen: false, isScrolled: false, mobileServicesOpen: false, isServicesDropdownOpen: false, isShowroomOpen: false }"
     @scroll.window="isScrolled = (window.pageYOffset > 50)" :class="{'menu-open': isMobileMenuOpen || isShowroomOpen}">
 
@@ -92,7 +92,7 @@
     <!-- Mobile Bottom Navbar -->
     <div :class="isMobileMenuOpen ? 'translate-y-full' : 'translate-y-0'"
         class="fixed bottom-0 left-0 right-0 z-40 lg:hidden transition-transform duration-300">
-        <div class="bg-[#A65E6E] flex items-stretch shadow-[0_-2px_20px_rgba(0,0,0,0.15)]">
+        <div class="bg-[#ec4cc7] flex items-stretch shadow-[0_-2px_20px_rgba(0,0,0,0.15)]">
             <a href="<?= $RANDEVU_URL ?>" target="_blank" rel="noopener noreferrer"
                 class="flex-1 flex flex-col items-center justify-center gap-1.5 py-3.5 text-white hover:bg-white/10 active:bg-white/20 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -154,7 +154,7 @@
                 <div class="relative" @mouseenter="isServicesDropdownOpen = true"
                     @mouseleave="isServicesDropdownOpen = false">
                     <a href="#services"
-                        class="text-[#2C3E50] text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300 flex items-center gap-1">
+                        class="text-[#000000] text-sm font-medium uppercase tracking-wide hover:text-[#ec4cc7] transition-colors duration-300 flex items-center gap-1">
                         Hizmetlerimiz
                         <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"
                             :class="isServicesDropdownOpen ? 'rotate-180' : ''"></i>
@@ -166,12 +166,12 @@
                         <div class="p-2">
                             <?php foreach ($serviceCategories as $i => $cat): ?>
                                 <div>
-                                    <div class="px-4 py-2 text-xs font-bold text-[#A65E6E] uppercase tracking-widest">
+                                    <div class="px-4 py-2 text-xs font-bold text-[#ec4cc7] uppercase tracking-widest">
                                         <?= htmlspecialchars($cat['title']) ?>
                                     </div>
                                     <?php foreach ($cat['services'] as $srv): ?>
                                         <a href="hizmet.php?slug=<?= $srv['slug'] ?>"
-                                            class="block px-4 py-2.5 text-sm text-[#2C3E50] hover:bg-[#F6D4DB]/30 hover:text-[#A65E6E] rounded-lg transition-colors font-medium">
+                                            class="block px-4 py-2.5 text-sm text-[#000000] hover:bg-[#f9def1]/30 hover:text-[#ec4cc7] rounded-lg transition-colors font-medium">
                                             <?= htmlspecialchars($srv['name']) ?>
                                         </a>
                                     <?php endforeach; ?>
@@ -184,11 +184,11 @@
                     </div>
                 </div>
                 <a href="blog.php"
-                    class="text-[#2C3E50] text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300">Blog</a>
+                    class="text-[#000000] text-sm font-medium uppercase tracking-wide hover:text-[#ec4cc7] transition-colors duration-300">Blog</a>
                 <a href="https://wa.me/905385296388" target="_blank"
-                    class="text-[#2C3E50] text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300">İletişim</a>
+                    class="text-[#000000] text-sm font-medium uppercase tracking-wide hover:text-[#ec4cc7] transition-colors duration-300">İletişim</a>
                 <a href="<?= $RANDEVU_URL ?>" target="_blank" rel="noopener noreferrer"
-                    class="px-6 py-2 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-sm font-semibold uppercase tracking-wide rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    class="px-6 py-2 bg-[#ec4cc7] hover:bg-[#8E4D5B] text-white text-sm font-semibold uppercase tracking-wide rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Randevu Al
                 </a>
             </nav>
@@ -197,14 +197,14 @@
             <button class="lg:hidden relative z-[60]" @click="isMobileMenuOpen = !isMobileMenuOpen">
                 <!-- Close icon (X) -->
                 <svg x-show="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                    viewBox="0 0 24 24" fill="none" stroke="#A65E6E" stroke-width="2" stroke-linecap="round"
+                    viewBox="0 0 24 24" fill="none" stroke="#ec4cc7" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
                 <!-- Hamburger icon (Menu) -->
                 <svg x-show="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                    viewBox="0 0 24 24" fill="none" stroke="#2C3E50" stroke-width="2" stroke-linecap="round"
+                    viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
                     <line x1="4" y1="6" x2="20" y2="6"></line>
                     <line x1="4" y1="12" x2="20" y2="12"></line>
@@ -215,10 +215,10 @@
 
         <!-- Mobile Menu Overlay -->
         <div x-show="isMobileMenuOpen" x-transition.opacity style="display: none;"
-            class="fixed inset-0 bg-[#F6D4DB] z-[55] flex flex-col items-center justify-start p-8 pt-28 space-y-6 overflow-y-auto min-h-screen">
+            class="fixed inset-0 bg-[#f9def1] z-[55] flex flex-col items-center justify-start p-8 pt-28 space-y-6 overflow-y-auto min-h-screen">
             <div class="w-full text-center">
                 <button @click="mobileServicesOpen = !mobileServicesOpen"
-                    class="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors inline-flex items-center gap-2">
+                    class="text-[#000000] text-2xl font-light tracking-wide hover:text-[#ec4cc7] transition-colors inline-flex items-center gap-2">
                     Hizmetlerimiz
                     <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200"
                         :class="mobileServicesOpen ? 'rotate-180' : ''"></i>
@@ -227,12 +227,12 @@
                     style="display: none;">
                     <?php foreach ($serviceCategories as $cat): ?>
                         <div>
-                            <div class="text-xs font-bold text-[#A65E6E] uppercase tracking-widest py-2">
+                            <div class="text-xs font-bold text-[#ec4cc7] uppercase tracking-widest py-2">
                                 <?= htmlspecialchars($cat['title']) ?>
                             </div>
                             <?php foreach ($cat['services'] as $srv): ?>
                                 <a href="hizmet.php?slug=<?= $srv['slug'] ?>" @click="isMobileMenuOpen = false"
-                                    class="block py-1.5 text-[#2C3E50] text-base font-light hover:text-[#A65E6E] transition-colors">
+                                    class="block py-1.5 text-[#000000] text-base font-light hover:text-[#ec4cc7] transition-colors">
                                     <?= htmlspecialchars($srv['name']) ?>
                                 </a>
                             <?php endforeach; ?>
@@ -242,14 +242,14 @@
             </div>
             <div class="w-full text-center">
                 <a href="#blog" @click="isMobileMenuOpen = false"
-                    class="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors">Blog</a>
+                    class="text-[#000000] text-2xl font-light tracking-wide hover:text-[#ec4cc7] transition-colors">Blog</a>
             </div>
             <div class="w-full text-center">
                 <a href="https://wa.me/905385296388" @click="isMobileMenuOpen = false" target="_blank"
-                    class="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors">İletişim</a>
+                    class="text-[#000000] text-2xl font-light tracking-wide hover:text-[#ec4cc7] transition-colors">İletişim</a>
             </div>
             <a href="<?= $RANDEVU_URL ?>" target="_blank"
-                class="mt-8 px-8 py-3 bg-[#A65E6E] text-white text-lg font-medium rounded-full"
+                class="mt-8 px-8 py-3 bg-[#ec4cc7] text-white text-lg font-medium rounded-full"
                 @click="isMobileMenuOpen = false">
                 Randevu Al
             </a>

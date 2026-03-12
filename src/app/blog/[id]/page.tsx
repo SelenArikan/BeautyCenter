@@ -218,10 +218,10 @@ export default function BlogDetailPage() {
 
     if (!post) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-[#F5F5F0]">
+            <div className="min-h-screen flex items-center justify-center bg-[#ffffff]">
                 <div className="text-center">
-                    <h1 className="text-4xl font-bold text-[#2C3E50] mb-4">Yazı Bulunamadı</h1>
-                    <Link href="/blog" className="text-[#A65E6E] font-semibold hover:underline">
+                    <h1 className="text-4xl font-bold text-[#000000] mb-4">Yazı Bulunamadı</h1>
+                    <Link href="/blog" className="text-[#ec4cc7] font-semibold hover:underline">
                         Blog&apos;a Dön
                     </Link>
                 </div>
@@ -234,21 +234,21 @@ export default function BlogDetailPage() {
     const relatedServices = getRelatedServiceData(post.relatedServices);
 
     return (
-        <div className="min-h-screen bg-[#F5F5F0] text-[#2C3E50] antialiased" style={{ fontFamily: "'Georgia', 'Newsreader', serif" }}>
+        <div className="min-h-screen bg-[#ffffff] text-[#000000] antialiased font-logo">
 
             {/* Top Navigation */}
-            <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#A65E6E]/10">
+            <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#ec4cc7]/10">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3 relative z-[60] group">
                         <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-10 md:h-12 w-auto transition-transform duration-300 hover:scale-105" />
                     </Link>
                     <nav className="hidden md:flex items-center gap-10">
-                        <Link href="/" className="text-sm font-medium hover:text-[#A65E6E] transition-colors">Ana Sayfa</Link>
-                        <Link href="/#services" className="text-sm font-medium hover:text-[#A65E6E] transition-colors">Hizmetler</Link>
-                        <Link href="/blog" className="text-sm font-medium text-[#A65E6E] underline underline-offset-8">Blog</Link>
-                        <a href="https://wa.me/905385296388" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-[#A65E6E] transition-colors">İletişim</a>
+                        <Link href="/" className="text-sm font-medium hover:text-[#ec4cc7] transition-colors">Ana Sayfa</Link>
+                        <Link href="/#services" className="text-sm font-medium hover:text-[#ec4cc7] transition-colors">Hizmetler</Link>
+                        <Link href="/blog" className="text-sm font-medium text-[#ec4cc7] underline underline-offset-8">Blog</Link>
+                        <a href="https://wa.me/905385296388" target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-[#ec4cc7] transition-colors">İletişim</a>
                     </nav>
-                    <a href={RANDEVU_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:inline-block bg-[#A65E6E] text-white px-8 py-3 rounded-full text-sm font-bold tracking-wider hover:bg-[#8E4D5B] transition-all shadow-lg shadow-[#A65E6E]/20">
+                    <a href={RANDEVU_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:inline-block bg-[#ec4cc7] text-white px-8 py-3 rounded-full text-sm font-bold tracking-wider hover:bg-[#8E4D5B] transition-all shadow-lg shadow-[#ec4cc7]/20">
                         RANDEVU AL
                     </a>
                 </div>
@@ -262,11 +262,11 @@ export default function BlogDetailPage() {
                     animate={{ opacity: 1 }}
                     className="flex items-center gap-2 text-sm text-[#5D6D7E] mb-8"
                 >
-                    <Link href="/" className="hover:text-[#A65E6E] transition-colors">Ana Sayfa</Link>
+                    <Link href="/" className="hover:text-[#ec4cc7] transition-colors">Ana Sayfa</Link>
                     <ChevronRight size={12} />
-                    <Link href="/blog" className="hover:text-[#A65E6E] transition-colors">Blog</Link>
+                    <Link href="/blog" className="hover:text-[#ec4cc7] transition-colors">Blog</Link>
                     <ChevronRight size={12} />
-                    <span className="text-[#2C3E50]">{post.category}</span>
+                    <span className="text-[#000000]">{post.category}</span>
                 </motion.nav>
 
                 {/* Article Header */}
@@ -276,7 +276,7 @@ export default function BlogDetailPage() {
                     transition={{ duration: 0.6 }}
                     className="mb-12 text-center max-w-3xl mx-auto"
                 >
-                    <div className="inline-block px-4 py-1 bg-[#A65E6E]/10 text-[#A65E6E] text-xs font-bold rounded-full mb-6 uppercase tracking-widest">
+                    <div className="inline-block px-4 py-1 bg-[#ec4cc7]/10 text-[#ec4cc7] text-xs font-bold rounded-full mb-6 uppercase tracking-widest">
                         {post.subtitle}
                     </div>
                     <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">{post.title}</h1>
@@ -313,7 +313,7 @@ export default function BlogDetailPage() {
                     >
                         {/* Intro with Drop Cap */}
                         <p className="mb-8 italic text-xl leading-relaxed" style={{ textIndent: 0 }}>
-                            <span className="text-7xl font-bold text-[#A65E6E] mr-3 float-left leading-[0.8] mt-1">
+                            <span className="text-7xl font-bold text-[#ec4cc7] mr-3 float-left leading-[0.8] mt-1">
                                 {post.intro.charAt(0)}
                             </span>
                             {post.intro.slice(1)}
@@ -322,17 +322,17 @@ export default function BlogDetailPage() {
                         {/* Sections */}
                         {post.sections.map((section, i) => (
                             <div key={i}>
-                                <h2 className="text-2xl md:text-3xl font-bold text-[#2C3E50] mt-12 mb-6">{section.title}</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-[#000000] mt-12 mb-6">{section.title}</h2>
                                 <p className="mb-6">{section.content}</p>
 
                                 {section.checklist && (
                                     <ul className="space-y-4 mb-8 list-none">
                                         {section.checklist.map((item, j) => (
                                             <li key={j} className="flex gap-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A65E6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1 flex-shrink-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ec4cc7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1 flex-shrink-0">
                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
                                                 </svg>
-                                                <span><strong className="text-[#2C3E50]">{item.bold}</strong> {item.text}</span>
+                                                <span><strong className="text-[#000000]">{item.bold}</strong> {item.text}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -353,21 +353,21 @@ export default function BlogDetailPage() {
                         ))}
 
                         {/* Quote */}
-                        <blockquote className="border-l-4 border-[#A65E6E] pl-8 my-10 py-2 italic text-2xl font-light text-[#2C3E50]">
+                        <blockquote className="border-l-4 border-[#ec4cc7] pl-8 my-10 py-2 italic text-2xl font-light text-[#000000]">
                             &ldquo;{post.quote}&rdquo;
                         </blockquote>
 
                         {/* Share Section */}
-                        <div className="mt-16 pt-8 border-t border-[#2C3E50]/10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div className="mt-16 pt-8 border-t border-[#000000]/10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                             <div className="flex items-center gap-4">
                                 <span className="text-sm font-bold uppercase tracking-widest text-[#5D6D7E]/50">Paylaş</span>
                                 <div className="flex gap-3">
-                                    <button className="w-10 h-10 rounded-full bg-white border border-[#2C3E50]/10 flex items-center justify-center text-[#5D6D7E] hover:text-[#A65E6E] hover:border-[#A65E6E] transition-all shadow-sm">
+                                    <button className="w-10 h-10 rounded-full bg-white border border-[#000000]/10 flex items-center justify-center text-[#5D6D7E] hover:text-[#ec4cc7] hover:border-[#ec4cc7] transition-all shadow-sm">
                                         <Share2 size={16} />
                                     </button>
                                     <button
                                         onClick={() => navigator.clipboard?.writeText(window.location.href)}
-                                        className="w-10 h-10 rounded-full bg-white border border-[#2C3E50]/10 flex items-center justify-center text-[#5D6D7E] hover:text-[#A65E6E] hover:border-[#A65E6E] transition-all shadow-sm"
+                                        className="w-10 h-10 rounded-full bg-white border border-[#000000]/10 flex items-center justify-center text-[#5D6D7E] hover:text-[#ec4cc7] hover:border-[#ec4cc7] transition-all shadow-sm"
                                     >
                                         <Link2 size={16} />
                                     </button>
@@ -375,7 +375,7 @@ export default function BlogDetailPage() {
                             </div>
                             <div className="flex gap-2 flex-wrap">
                                 {post.tags.map((tag, i) => (
-                                    <span key={i} className="px-3 py-1 bg-[#F5F5F0] border border-[#2C3E50]/5 rounded-full text-xs font-medium text-[#5D6D7E]">
+                                    <span key={i} className="px-3 py-1 bg-[#ffffff] border border-[#000000]/5 rounded-full text-xs font-medium text-[#5D6D7E]">
                                         {tag}
                                     </span>
                                 ))}
@@ -392,10 +392,10 @@ export default function BlogDetailPage() {
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.5 }}
-                                className="bg-white border border-[#A65E6E]/10 rounded-2xl p-8 shadow-sm"
+                                className="bg-white border border-[#ec4cc7]/10 rounded-2xl p-8 shadow-sm"
                             >
                                 <h4 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <Sparkles size={18} className="text-[#A65E6E]" />
+                                    <Sparkles size={18} className="text-[#ec4cc7]" />
                                     İlgili Hizmetler
                                 </h4>
                                 <div className="space-y-6">
@@ -408,7 +408,7 @@ export default function BlogDetailPage() {
                                             <p className="text-sm text-[#5D6D7E] mb-4 line-clamp-2">{srv.details}</p>
                                             <Link
                                                 href={`/hizmet/${srv.slug}`}
-                                                className="block w-full py-2 border border-[#A65E6E] text-[#A65E6E] rounded-full text-sm font-bold text-center hover:bg-[#A65E6E] hover:text-white transition-all"
+                                                className="block w-full py-2 border border-[#ec4cc7] text-[#ec4cc7] rounded-full text-sm font-bold text-center hover:bg-[#ec4cc7] hover:text-white transition-all"
                                             >
                                                 DETAYLI BİLGİ
                                             </Link>
@@ -422,19 +422,19 @@ export default function BlogDetailPage() {
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.7 }}
-                                className="bg-[#A65E6E]/5 rounded-2xl p-8 border border-[#A65E6E]/20"
+                                className="bg-[#ec4cc7]/5 rounded-2xl p-8 border border-[#ec4cc7]/20"
                             >
                                 <h4 className="text-xl font-bold mb-3">Güzellikten Haberdar Olun</h4>
                                 <p className="text-sm text-[#5D6D7E] mb-6">En yeni bakım trendleri ve size özel teklifler için bültenimize abone olun.</p>
                                 <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                                     <input
-                                        className="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 focus:ring-2 focus:ring-[#A65E6E] focus:border-[#A65E6E] text-sm outline-none transition-all"
+                                        className="w-full px-4 py-3 rounded-xl border border-[#000000]/10 focus:ring-2 focus:ring-[#ec4cc7] focus:border-[#ec4cc7] text-sm outline-none transition-all"
                                         placeholder="E-posta adresiniz"
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
-                                    <button className="w-full py-3 bg-[#A65E6E] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#8E4D5B] transition-all">
+                                    <button className="w-full py-3 bg-[#ec4cc7] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#8E4D5B] transition-all">
                                         ABONE OL
                                     </button>
                                 </form>
@@ -444,14 +444,14 @@ export default function BlogDetailPage() {
                 </div>
 
                 {/* Next/Previous Article Navigation */}
-                <section className="mt-24 pt-12 border-t border-[#2C3E50]/10">
+                <section className="mt-24 pt-12 border-t border-[#000000]/10">
                     <div className="flex flex-col md:flex-row gap-12 items-center justify-between">
                         {prevPost ? (
                             <Link href={`/blog/${prevPost.id}`} className="group flex items-center gap-6 max-w-sm">
-                                <ArrowLeft size={32} className="text-[#5D6D7E]/30 group-hover:text-[#A65E6E] transition-colors flex-shrink-0" />
+                                <ArrowLeft size={32} className="text-[#5D6D7E]/30 group-hover:text-[#ec4cc7] transition-colors flex-shrink-0" />
                                 <div>
                                     <span className="text-xs font-bold uppercase tracking-widest text-[#5D6D7E]/50">Önceki Yazı</span>
-                                    <h4 className="font-bold text-lg leading-tight group-hover:text-[#A65E6E] transition-colors">{prevPost.title}</h4>
+                                    <h4 className="font-bold text-lg leading-tight group-hover:text-[#ec4cc7] transition-colors">{prevPost.title}</h4>
                                 </div>
                             </Link>
                         ) : <div />}
@@ -460,9 +460,9 @@ export default function BlogDetailPage() {
                             <Link href={`/blog/${nextPost.id}`} className="group flex items-center gap-6 max-w-sm text-right">
                                 <div>
                                     <span className="text-xs font-bold uppercase tracking-widest text-[#5D6D7E]/50">Sonraki Yazı</span>
-                                    <h4 className="font-bold text-lg leading-tight group-hover:text-[#A65E6E] transition-colors">{nextPost.title}</h4>
+                                    <h4 className="font-bold text-lg leading-tight group-hover:text-[#ec4cc7] transition-colors">{nextPost.title}</h4>
                                 </div>
-                                <ArrowRight size={32} className="text-[#5D6D7E]/30 group-hover:text-[#A65E6E] transition-colors flex-shrink-0" />
+                                <ArrowRight size={32} className="text-[#5D6D7E]/30 group-hover:text-[#ec4cc7] transition-colors flex-shrink-0" />
                             </Link>
                         ) : <div />}
                     </div>
@@ -470,7 +470,7 @@ export default function BlogDetailPage() {
             </main>
 
             {/* Footer */}
-            <footer className="bg-white border-t border-[#A65E6E]/10 py-16 mt-20">
+            <footer className="bg-white border-t border-[#ec4cc7]/10 py-16 mt-20">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="flex justify-center mb-6">
                         <img src="/assets/logo/logo.png" alt="Love Yourself By Anastasiya" className="h-16 md:h-20 w-auto transition-transform duration-300 hover:scale-105" />
@@ -479,8 +479,8 @@ export default function BlogDetailPage() {
                         &ldquo;Kendinizi sevmeniz için buradayız. Her gün bir yeni başlangıç, her bakım bir öz sevgi eylemidir.&rdquo;
                     </p>
                     <div className="flex justify-center gap-8 text-sm font-medium mb-12">
-                        <a href="https://www.instagram.com/loveyourselfbyanastasiya/" target="_blank" rel="noopener noreferrer" className="hover:text-[#A65E6E] transition-colors">Instagram</a>
-                        <a href="https://wa.me/905385296388" target="_blank" rel="noopener noreferrer" className="hover:text-[#A65E6E] transition-colors">WhatsApp</a>
+                        <a href="https://www.instagram.com/loveyourselfbyanastasiya/" target="_blank" rel="noopener noreferrer" className="hover:text-[#ec4cc7] transition-colors">Instagram</a>
+                        <a href="https://wa.me/905385296388" target="_blank" rel="noopener noreferrer" className="hover:text-[#ec4cc7] transition-colors">WhatsApp</a>
                     </div>
                     <p className="text-xs text-[#5D6D7E]/40">© 2026 Love Yourself by Anastasiya. Tüm hakları saklıdır.</p>
                 </div>
