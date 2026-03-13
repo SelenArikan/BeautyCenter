@@ -191,6 +191,8 @@
                 </div>
                 <a href="blog.php"
                     class="text-[#2C3E50] text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300">Blog</a>
+                <a href="sss.php"
+                    class="text-[#2C3E50] text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300">SSS</a>
                 <a href="https://wa.me/905385296388" target="_blank"
                     class="text-[#2C3E50] text-sm font-medium uppercase tracking-wide hover:text-[#A65E6E] transition-colors duration-300">İletişim</a>
                 <a href="<?= $RANDEVU_URL ?>" target="_blank" rel="noopener noreferrer"
@@ -249,6 +251,10 @@
             <div class="w-full text-center">
                 <a href="#blog" @click="isMobileMenuOpen = false"
                     class="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors">Blog</a>
+            </div>
+            <div class="w-full text-center">
+                <a href="sss.php" @click="isMobileMenuOpen = false"
+                    class="text-[#2C3E50] text-2xl font-light tracking-wide hover:text-[#A65E6E] transition-colors">SSS</a>
             </div>
             <div class="w-full text-center">
                 <a href="https://wa.me/905385296388" @click="isMobileMenuOpen = false" target="_blank"

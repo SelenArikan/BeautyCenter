@@ -7,7 +7,7 @@ $serviceCategories = [
         "title" => "Cilt Bakımı & Medikal",
         "slug" => "cilt-bakimi-medikal",
         "desc" => "Profesyonel cilt analizi ve medikal bakım uygulamalarıyla cildinize özen gösterin",
-        "image" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
+        "image" => "/public/assets/ciltbakimi/DSC07647.jpg",
         "services" => [
             [
                 "name" => "Medikal Cilt Bakımı",
@@ -15,7 +15,7 @@ $serviceCategories = [
                 "details" => "Cildinizin ihtiyacına özel hazırlanan profesyonel medikal bakım seansları ile derinlemesine temizlik ve yenileme.",
                 "longDetails" => "Medikal cilt bakımı, cildinizin ihtiyaçlarına göre özel olarak tasarlanmış profesyonel bir bakım programıdır. Uzman ekibimiz, cilt analizinden sonra size en uygun bakım protokolünü belirler. Hydrafacial, kimyasal peeling ve özel serum uygulamalarını içeren kapsamlı bir bakım deneyimi sunarız.",
                 "duration" => "60 Dakika",
-                "image" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
+                "image" => "/public/assets/ciltbakimi/DSC07647.jpg",
                 "heroImage" => "/public/assets/ciltbakimi/DSC03380.jpg",
                 "features" => ["Cilt Analizi", "Hydrafacial", "Kimyasal Peeling", "Özel Serumlar", "Anti-Aging"]
             ],
@@ -26,7 +26,7 @@ $serviceCategories = [
                 "longDetails" => "Hydrafacial, patentli teknolojisiyle cildinizi derinlemesine temizleyen, eksfoliye eden, arındıran ve nemlendiren devrim niteliğinde bir cilt bakım uygulamasıdır.",
                 "duration" => "45 Dakika",
                 "image" => "/public/assets/ciltbakimi/DSC03384.jpg",
-                "heroImage" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
+                "heroImage" => "/public/assets/ciltbakimi/DSC07647.jpg",
                 "features" => ["Derinlemesine Temizlik", "Eksfoliasyon", "Nemlendirme", "Anında Sonuç"]
             ]
         ]

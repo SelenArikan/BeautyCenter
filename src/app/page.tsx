@@ -256,6 +256,7 @@ export default function LongospherePage() {
     const navLinks = [
         { name: 'Hizmetlerimiz', href: '#services', hasDropdown: true },
         { name: 'Blog', href: '/blog' },
+        { name: 'SSS', href: '/sss' },
         { name: 'İletişim', href: 'https://wa.me/905385296388' },
     ];
 

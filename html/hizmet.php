@@ -206,7 +206,7 @@ if (!$foundService) {
                                 </span>
                             </div>
                         </div>
-                        <a href="<?= htmlspecialchars($RANDEVU_URL) ?>" target="_blank" rel="noopener noreferrer"
+                        <a href="<?= htmlspecialchars($foundService['appointmentLink'] ?? $RANDEVU_URL) ?>" target="_blank" rel="noopener noreferrer"
                             class="block w-full py-4 bg-[#A65E6E] hover:bg-[#8E4D5B] text-white text-center text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg">
                             Randevu Al
                         </a>

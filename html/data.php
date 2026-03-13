@@ -7,7 +7,7 @@ $serviceCategories = [
         "title" => "Cilt Bakımı & Medikal",
         "slug" => "cilt-bakimi-medikal",
         "desc" => "Profesyonel cilt analizi ve medikal bakım uygulamalarıyla cildinize özen gösterin",
-        "image" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
+        "image" => "/public/assets/ciltbakimi/DSC07647.jpg",
         "services" => [
             [
                 "name" => "Medikal Cilt Bakımı",
@@ -15,10 +15,11 @@ $serviceCategories = [
                 "details" => "Cildinizin ihtiyacına özel hazırlanan profesyonel medikal bakım seansları ile derinlemesine temizlik ve yenileme.",
                 "longDetails" => "Medikal cilt bakımı, cildinizin ihtiyaçlarına göre özel olarak tasarlanmış profesyonel bir bakım programıdır. Uzman ekibimiz, cilt analizinden sonra size en uygun bakım protokolünü belirler. Hydrafacial, kimyasal peeling ve özel serum uygulamalarını içeren kapsamlı bir bakım deneyimi sunarız.",
                 "duration" => "60 Dakika",
-                "image" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
+                "image" => "/public/assets/ciltbakimi/DSC07647.jpg",
                 "heroImage" => "/public/assets/ciltbakimi/DSC03380.jpg",
                 "features" => ["Cilt Analizi", "Hydrafacial", "Kimyasal Peeling", "Özel Serumlar", "Anti-Aging"],
-                "gallery" => ["/public/assets/ciltbakimi/cilt_bakimi.jpg", "/public/assets/ciltbakimi/DSC03380.jpg", "/public/assets/ciltbakimi/DSC03384.jpg", "/public/assets/ciltbakimi/_DSC7859.jpg", "/public/assets/ciltbakimi/_DSC7872.jpg", "/public/assets/ciltbakimi/DSC07649.jpg"]
+                "gallery" => ["/public/assets/ciltbakimi/DSC07647.jpg", "/public/assets/ciltbakimi/DSC03380.jpg", "/public/assets/ciltbakimi/DSC03384.jpg", "/public/assets/ciltbakimi/_DSC7859.jpg", "/public/assets/ciltbakimi/_DSC7872.jpg", "/public/assets/ciltbakimi/DSC07649.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=37-1&kampanya=&kampanya_musteri=&referans=&sube=184768&website=1"
             ],
             [
                 "name" => "Hydrafacial",
@@ -27,9 +28,10 @@ $serviceCategories = [
                 "longDetails" => "Hydrafacial, patentli teknolojisiyle cildinizi derinlemesine temizleyen, eksfoliye eden, arındıran ve nemlendiren devrim niteliğinde bir cilt bakım uygulamasıdır.",
                 "duration" => "45 Dakika",
                 "image" => "/public/assets/ciltbakimi/DSC03384.jpg",
-                "heroImage" => "/public/assets/ciltbakimi/cilt_bakimi.jpg",
+                "heroImage" => "/public/assets/ciltbakimi/DSC07647.jpg",
                 "features" => ["Derinlemesine Temizlik", "Eksfoliasyon", "Nemlendirme", "Anında Sonuç"],
-                "gallery" => ["/public/assets/ciltbakimi/cilt_bakimi.jpg", "/public/assets/ciltbakimi/DSC03380.jpg", "/public/assets/ciltbakimi/DSC03384.jpg", "/public/assets/ciltbakimi/_DSC7859.jpg", "/public/assets/ciltbakimi/_DSC7872.jpg", "/public/assets/ciltbakimi/DSC07649.jpg"]
+                "gallery" => ["/public/assets/ciltbakimi/DSC07647.jpg", "/public/assets/ciltbakimi/DSC03380.jpg", "/public/assets/ciltbakimi/DSC03384.jpg", "/public/assets/ciltbakimi/_DSC7859.jpg", "/public/assets/ciltbakimi/_DSC7872.jpg", "/public/assets/ciltbakimi/DSC07649.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=12372-1&kampanya=&kampanya_musteri=&referans=&sube=184768&website=1"
             ]
         ]
     ],
@@ -37,7 +39,7 @@ $serviceCategories = [
         "title" => "Kalıcı Makyaj",
         "slug" => "kalici-makyaj",
         "desc" => "Doğal görünümlü, uzun süre kalıcı profesyonel makyaj uygulamaları",
-        "image" => "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
+        "image" => "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?q=80&w=1080&auto=format&fit=crop",
         "services" => [
             [
                 "name" => "Kalıcı Dudak",
@@ -45,10 +47,11 @@ $serviceCategories = [
                 "details" => "Dudaklarınıza doğal ve dolgun bir görünüm kazandıran kalıcı dudak pigmentasyonu.",
                 "longDetails" => "Kalıcı dudak uygulaması, dudaklarınızın doğal rengini ve şeklini vurgulayan profesyonel bir pigmentasyon işlemidir.",
                 "duration" => "90 Dakika",
-                "image" => "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
-                "heroImage" => "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
+                "image" => "/public/assets/young-woman-undergoing-procedure-of-permanent-lip-2026-01-07-06-04-24-utc.jpg.jpeg",
+                "heroImage" => "/public/assets/young-woman-undergoing-procedure-of-permanent-lip-2026-01-07-06-04-24-utc.jpg.jpeg",
                 "features" => ["Doğal Görünüm", "Kişiye Özel Renk", "Uzun Ömürlü", "Ağrısız"],
-                "gallery" => ["/public/assets/Mekan/DSC02978.jpg", "/public/assets/Mekan/DSC02996.jpg", "/public/assets/Mekan/DSC03012.jpg", "/public/assets/Mekan/DSC03013.jpg"]
+                "gallery" => ["/public/assets/young-woman-undergoing-procedure-of-permanent-lip-2026-01-07-06-04-24-utc.jpg.jpeg", "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=1080&auto=format&fit=crop"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=76-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ],
             [
                 "name" => "Kalıcı Kaş",
@@ -56,10 +59,11 @@ $serviceCategories = [
                 "details" => "Microblading ve ombre tekniğiyle kaşlarınıza doğal ve dolgun bir çerçeve.",
                 "longDetails" => "Kalıcı kaş uygulaması, microblading ve ombre tekniklerinin uzman ellerle uygulanmasıyla kaşlarınıza mükemmel bir şekil ve dolgunluk kazandırır.",
                 "duration" => "120 Dakika",
-                "image" => "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop",
-                "heroImage" => "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop",
+                "image" => "https://plus.unsplash.com/premium_photo-1663050996462-4671145bf66f?q=80&w=1080&auto=format&fit=crop",
+                "heroImage" => "https://plus.unsplash.com/premium_photo-1663050996462-4671145bf66f?q=80&w=1080&auto=format&fit=crop",
                 "features" => ["Microblading", "Ombre Tekniği", "Doğal Kıl Kıl", "Yüz Analizi"],
-                "gallery" => ["/public/assets/Mekan/_DSC5208.jpg", "/public/assets/Mekan/_DSC5211.jpg", "/public/assets/Mekan/_DSC5218.jpg", "/public/assets/Mekan/_DSC5227.jpg"]
+                "gallery" => ["https://plus.unsplash.com/premium_photo-1663050996462-4671145bf66f?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?q=80&w=1080&auto=format&fit=crop"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=75-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ],
             [
                 "name" => "Kalıcı Eyeliner",
@@ -67,10 +71,11 @@ $serviceCategories = [
                 "details" => "Gözlerinize derinlik ve ifade katan kalıcı eyeliner uygulaması.",
                 "longDetails" => "Kalıcı eyeliner, gözlerinize her an bakımlı ve çekici bir görünüm kazandırır.",
                 "duration" => "60 Dakika",
-                "image" => "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
-                "heroImage" => "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=2070&auto=format&fit=crop",
+                "image" => "https://images.unsplash.com/photo-1565113521364-cb12a3ec0f28?q=80&w=1080&auto=format&fit=crop",
+                "heroImage" => "https://images.unsplash.com/photo-1565113521364-cb12a3ec0f28?q=80&w=1080&auto=format&fit=crop",
                 "features" => ["İnce Çizgi", "Kirpik Dolgusu", "Doğal Görünüm", "Steril Ortam"],
-                "gallery" => ["/public/assets/Mekan/DSC02978.jpg", "/public/assets/Mekan/DSC03012.jpg", "/public/assets/Mekan/_DSC5208.jpg", "/public/assets/Mekan/_DSC5218.jpg"]
+                "gallery" => ["https://images.unsplash.com/photo-1565113521364-cb12a3ec0f28?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1542833807-ad5af0977050?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1583001809873-a128495da465?q=80&w=1080&auto=format&fit=crop", "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1080&auto=format&fit=crop"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=75-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ]
         ]
     ],
@@ -89,7 +94,8 @@ $serviceCategories = [
                 "image" => "/public/assets/ipekkirpik/DSC07334.jpg",
                 "heroImage" => "/public/assets/ipekkirpik/DSC07334.jpg",
                 "features" => ["Klasik Teknik", "Volume Teknik", "Doğal Görünüm", "Hafif & Konforlu"],
-                "gallery" => ["/public/assets/ipekkirpik/DSC07334.jpg", "/public/assets/ipekkirpik/DSC07330.jpg", "/public/assets/ipekkirpik/DSC07335.jpg", "/public/assets/ipekkirpik/DSC07338.jpg"]
+                "gallery" => ["/public/assets/ipekkirpik/DSC07334.jpg", "/public/assets/ipekkirpik/DSC07330.jpg", "/public/assets/ipekkirpik/DSC07335.jpg", "/public/assets/ipekkirpik/DSC07338.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=46-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ],
             [
                 "name" => "Kirpik Lifting",
@@ -100,7 +106,8 @@ $serviceCategories = [
                 "image" => "/public/assets/ipekkirpik/DSC07338.jpg",
                 "heroImage" => "/public/assets/ipekkirpik/DSC07338.jpg",
                 "features" => ["Doğal Kıvrım", "Kirpik Boyama", "6-8 Hafta Kalıcı", "Güvenli"],
-                "gallery" => ["/public/assets/ipekkirpik/DSC07338.jpg", "/public/assets/ipekkirpik/DSC07330.jpg", "/public/assets/ipekkirpik/DSC07334.jpg", "/public/assets/ipekkirpik/DSC07335.jpg"]
+                "gallery" => ["/public/assets/ipekkirpik/DSC07338.jpg", "/public/assets/ipekkirpik/DSC07330.jpg", "/public/assets/ipekkirpik/DSC07334.jpg", "/public/assets/ipekkirpik/DSC07335.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=10729-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ]
         ]
     ],
@@ -119,7 +126,8 @@ $serviceCategories = [
                 "image" => "/public/assets/epilasyon/DSC07517.jpg",
                 "heroImage" => "/public/assets/epilasyon/DSC07548.jpg",
                 "features" => ["Son Teknoloji", "Tüm Cilt Tipleri", "Soğutma Sistemi", "Kalıcı Sonuç"],
-                "gallery" => ["/public/assets/epilasyon/DSC07517.jpg", "/public/assets/epilasyon/DSC07548.jpg", "/public/assets/epilasyon/DSC07515.jpg"]
+                "gallery" => ["/public/assets/epilasyon/DSC07517.jpg", "/public/assets/epilasyon/DSC07548.jpg", "/public/assets/epilasyon/DSC07515.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=508347-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ],
             [
                 "name" => "İğneli Epilasyon",
@@ -130,7 +138,8 @@ $serviceCategories = [
                 "image" => "/public/assets/epilasyon/DSC07548.jpg",
                 "heroImage" => "/public/assets/epilasyon/DSC07548.jpg",
                 "features" => ["%100 Kalıcı", "Tüm Tüy Renkleri", "Tek Kullanımlık İğne", "Uzman Uygulama"],
-                "gallery" => ["/public/assets/epilasyon/DSC07517.jpg", "/public/assets/epilasyon/DSC07548.jpg", "/public/assets/epilasyon/DSC07515.jpg"]
+                "gallery" => ["/public/assets/epilasyon/DSC07517.jpg", "/public/assets/epilasyon/DSC07548.jpg", "/public/assets/epilasyon/DSC07515.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=508347-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ]
         ]
     ],
@@ -149,7 +158,8 @@ $serviceCategories = [
                 "image" => "/public/assets/zayiflama/_DSC0055.jpg",
                 "heroImage" => "/public/assets/zayiflama/_DSC0055.jpg",
                 "features" => ["Lenfatik Drenaj", "Kavitasyon", "Radyofrekans", "Vücut Analizi"],
-                "gallery" => ["/public/assets/zayiflama/_DSC0055.jpg", "/public/assets/zayiflama/DSC07494.jpg", "/public/assets/zayiflama/DSC07459.jpg", "/public/assets/zayiflama/_DSC7845.jpg"]
+                "gallery" => ["/public/assets/zayiflama/_DSC0055.jpg", "/public/assets/zayiflama/DSC07494.jpg", "/public/assets/zayiflama/DSC07459.jpg", "/public/assets/zayiflama/_DSC7845.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=508348-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ],
             [
                 "name" => "Medikal Masaj",
@@ -160,7 +170,8 @@ $serviceCategories = [
                 "image" => "/public/assets/Masaj/_DSC5331.jpg",
                 "heroImage" => "/public/assets/Masaj/_DSC5331.jpg",
                 "features" => ["Derin Doku", "Lenfatik Drenaj", "Stres Giderme", "Kan Dolaşımı"],
-                "gallery" => ["/public/assets/Masaj/_DSC5331.jpg", "/public/assets/Masaj/_DSC5325.jpg", "/public/assets/Masaj/_DSC5329.jpg", "/public/assets/Masaj/_DSC5357.jpg"]
+                "gallery" => ["/public/assets/Masaj/_DSC5331.jpg", "/public/assets/Masaj/_DSC5325.jpg", "/public/assets/Masaj/_DSC5329.jpg", "/public/assets/Masaj/_DSC5357.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=240-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ]
         ]
     ],
@@ -179,7 +190,8 @@ $serviceCategories = [
                 "image" => "/public/assets/Oje/_DSC7899.jpg",
                 "heroImage" => "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2070&auto=format&fit=crop",
                 "features" => ["Akrilik", "Jel", "Doğal Görünüm", "Uzun Ömürlü"],
-                "gallery" => ["/public/assets/Oje/DSC03024.jpg", "/public/assets/Oje/DSC03032.jpg", "/public/assets/Oje/DSC03037.jpg", "/public/assets/Oje/DSC03041.jpg"]
+                "gallery" => ["/public/assets/Oje/DSC03024.jpg", "/public/assets/Oje/DSC03032.jpg", "/public/assets/Oje/DSC03037.jpg", "/public/assets/Oje/DSC03041.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=569357-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ],
             [
                 "name" => "Manikür & Pedikür",
@@ -190,7 +202,8 @@ $serviceCategories = [
                 "image" => "/public/assets/Oje/DSC03032.jpg",
                 "heroImage" => "/public/assets/Oje/DSC03032.jpg",
                 "features" => ["Tırnak Şekillendirme", "El & Ayak Masajı", "Jel Oje", "Peeling"],
-                "gallery" => ["/public/assets/Oje/DSC03032.jpg", "/public/assets/Oje/DSC03024.jpg", "/public/assets/Oje/DSC03037.jpg", "/public/assets/Oje/DSC03052.jpg"]
+                "gallery" => ["/public/assets/Oje/DSC03032.jpg", "/public/assets/Oje/DSC03024.jpg", "/public/assets/Oje/DSC03037.jpg", "/public/assets/Oje/DSC03052.jpg"],
+                "appointmentLink" => "https://www.kolayrandevu.com/randevu3.php?hizmetler%5B%5D=33-1&hizmetler%5B%5D=34-1&kampanya=&kampanya_musteri=&kampanya_kabul=&referans=&greserve=&website=1&sube=184768"
             ]
         ]
     ]

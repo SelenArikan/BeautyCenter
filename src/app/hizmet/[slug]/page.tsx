@@ -305,7 +305,7 @@ export default function ServiceDetailPage() {
                                     </div>
                                 </div>
                                 <a
-                                    href={RANDEVU_URL}
+                                    href={service.appointmentLink || RANDEVU_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block w-full py-4 bg-[#ec4cc7] hover:bg-[#8E4D5B] text-white text-center text-sm font-bold uppercase tracking-widest rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg"

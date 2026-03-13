@@ -186,9 +186,9 @@ const blogPosts = [
             }
         ],
         quote: "Kalıcı makyaj, her sabah aynaya baktığınızda gülümsemenizi sağlar.",
-        secondaryImage: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
+        secondaryImage: "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?q=80&w=1080&auto=format&fit=crop",
         secondaryCaption: "Doğal görünüm, kalıcı makyajın altın kuralıdır.",
-        image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?q=80&w=1080&auto=format&fit=crop",
         category: "Wellness",
         tags: ["#KalıcıMakyaj", "#Microblading", "#Güzellik"],
         date: "10 Ocak 2026",

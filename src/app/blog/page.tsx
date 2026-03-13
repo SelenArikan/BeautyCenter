@@ -155,7 +155,7 @@ Gözlerinize derinlik katan ince veya kalın eyeliner seçenekleri.
 - 4-6 hafta sonra rötuş seansı
 
 Anastasiya'nın uzman dokunuşlarıyla en doğal sonuçları elde edin.`,
-        image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1595550912256-b24059bb08e8?q=80&w=1080&auto=format&fit=crop",
         category: "Wellness",
         date: "10 Ocak 2026"
     }
