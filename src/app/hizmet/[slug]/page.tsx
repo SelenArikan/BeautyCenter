@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ChevronRight, ChevronLeft, Clock, Sparkles, Camera, X } from 'lucide-react';
+import { ArrowRight, ChevronRight, ChevronLeft, Clock, Sparkles, Camera, X, FileText } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { getServiceBySlug, serviceCategories, RANDEVU_URL } from '@/data/services';
@@ -323,6 +323,27 @@ export default function ServiceDetailPage() {
                                     <li>• Alerjik reaksiyon bilgilerinizi paylaşmayı unutmayınız.</li>
                                 </ul>
                             </div>
+
+                            {/* Kalıcı Makyaj Bilgilendirme Linki */}
+                            {category.slug === 'kalici-makyaj' && (
+                                <Link
+                                    href="/kalici-makyaj-bilgilendirme"
+                                    className="flex items-center gap-4 p-5 bg-gradient-to-r from-[#f9def1] to-white rounded-2xl border border-[#ec4cc7]/30 shadow-sm hover:shadow-md hover:border-[#ec4cc7]/60 transition-all duration-300 group mb-8"
+                                >
+                                    <div className="w-11 h-11 bg-[#ec4cc7] rounded-full flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                        <FileText size={18} className="text-white" />
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <span className="block text-sm font-bold text-[#000000] group-hover:text-[#ec4cc7] transition-colors">
+                                            Uygulama Öncesi Bilgilendirme
+                                        </span>
+                                        <span className="block text-xs text-[#5D6D7E] font-light mt-0.5">
+                                            Riskler, rötuş ve sağlık soruları
+                                        </span>
+                                    </div>
+                                    <ArrowRight size={16} className="text-[#ec4cc7] flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+                                </Link>
+                            )}
 
                             {/* Other Services */}
                             <div className="bg-white rounded-2xl shadow-xl p-6">

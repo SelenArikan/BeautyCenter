@@ -134,6 +134,21 @@ if (!$foundService) {
                         </ul>
                     </div>
 
+                    <!-- Kalıcı Makyaj Bilgilendirme Linki -->
+                    <?php if ($foundCategory['slug'] === 'kalici-makyaj'): ?>
+                    <a href="kalici-makyaj-bilgilendirme.php"
+                        class="flex items-center gap-4 p-5 bg-gradient-to-r from-[#f9def1] to-white rounded-2xl border border-[#ec4cc7]/30 shadow-sm hover:shadow-md hover:border-[#ec4cc7]/60 transition-all duration-300 group mb-8">
+                        <div class="w-11 h-11 bg-[#ec4cc7] rounded-full flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="file-text" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="block text-sm font-bold text-[#000000] group-hover:text-[#ec4cc7] transition-colors">Uygulama Öncesi Bilgilendirme</span>
+                            <span class="block text-xs text-[#5D6D7E] font-light mt-0.5">Riskler, rötuş ve sağlık soruları</span>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-[#ec4cc7] flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                    <?php endif; ?>
+
                     <!-- Other Services -->
                     <div class="bg-white rounded-2xl shadow-xl p-6">
                         <h4 class="font-bold text-[#000000] mb-4 text-lg">Diğer Hizmetlerimiz</h4>
