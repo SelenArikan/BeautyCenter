@@ -64,7 +64,7 @@
                     </li>
                     <li class="flex items-center gap-3">
                         <i data-lucide="mail" class="w-5 h-5 text-[#ec4cc7]"></i>
-                        <span class="text-[#000000]/70 text-sm font-light">info@loveyourself.com</span>
+                        <span class="text-[#000000]/70 text-sm font-light">info@loveyourself.com.tr</span>
                     </li>
                 </ul>
             </div>
@@ -76,8 +76,7 @@
                 <?= date('Y') ?> Love Yourself By Anastasiya. Tüm hakları saklıdır.
             </p>
             <div class="flex gap-6">
-                <span class="text-[#000000]/40 text-xs font-light tracking-widest uppercase">Designed by
-                    Antigravity</span>
+
             </div>
         </div>
     </div>

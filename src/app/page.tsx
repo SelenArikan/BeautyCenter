@@ -982,7 +982,7 @@ export default function LongospherePage() {
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <Mail size={20} className="text-[#ec4cc7]" />
-                                    <span className="text-[#000000]/70 text-sm font-light">info@loveyourself.com</span>
+                                    <span className="text-[#000000]/70 text-sm font-light">info@loveyourself.com.tr</span>
                                 </li>
                             </ul>
                         </div>

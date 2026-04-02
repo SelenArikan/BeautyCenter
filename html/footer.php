@@ -14,7 +14,9 @@
                     <a href="https://www.instagram.com/loveyourselfbyanastasiya/" target="_blank"
                         rel="noopener noreferrer"
                         class="w-10 h-10 rounded-full bg-[#000000]/5 hover:bg-[#ec4cc7] flex items-center justify-center transition-colors duration-300 text-[#000000] hover:text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-5">
                             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
@@ -41,13 +43,16 @@
             <div>
                 <h4 class="text-lg font-bold mb-6 text-[#ec4cc7]">Bilgilendirme</h4>
                 <ul class="space-y-3">
-                    <li><a href="#" class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">KVKK
+                    <li><a href="kvkk.php" class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">KVKK
                             Aydınlatma Metni</a></li>
-                    <li><a href="#" class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Gizlilik
+                    <li><a href="gizlilik.php"
+                            class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Gizlilik
                             Politikası</a></li>
-                    <li><a href="#" class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Çerez
+                    <li><a href="cerez.php"
+                            class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Çerez
                             Politikası</a></li>
-                    <li><a href="#" class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Mesafeli
+                    <li><a href="mesafeli-satis.php"
+                            class="text-[#000000]/70 hover:text-[#000000] text-sm transition-colors">Mesafeli
                             Satış Sözleşmesi</a></li>
                 </ul>
             </div>
@@ -68,7 +73,7 @@
                     </li>
                     <li class="flex items-center gap-3">
                         <i data-lucide="mail" class="w-5 h-5 text-[#ec4cc7]"></i>
-                        <span class="text-[#000000]/70 text-sm font-light">info@loveyourself.com</span>
+                        <span class="text-[#000000]/70 text-sm font-light">info@loveyourself.com.tr</span>
                     </li>
                 </ul>
             </div>
@@ -80,8 +85,6 @@
                 <?= date('Y') ?> Love Yourself By Anastasiya. Tüm hakları saklıdır.
             </p>
             <div class="flex gap-6">
-                <span class="text-[#000000]/40 text-xs font-light tracking-widest uppercase">Designed by
-                    Antigravity</span>
             </div>
         </div>
     </div>
